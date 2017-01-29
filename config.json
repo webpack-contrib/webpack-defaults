@@ -1,0 +1,8 @@
+{
+    "tasks": [
+        "package",
+        "gitignore",
+        "editorconfig",
+        "eslint"
+    ]
+}

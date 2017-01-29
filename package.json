@@ -1,0 +1,38 @@
+{
+  "name": "webpack-defaults",
+  "version": "0.0.0",
+  "description": "Defaults to be shared across webpack projects",
+  "author": {
+    "name": "Artem Sapegin",
+    "url": "http://sapegin.me"
+  },
+  "homepage": "https://github.com/webpack-contrib/webpack-defaults",
+  "repository": "webpack-contrib/webpack-defaults",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6"
+  },
+  "bin": "index.js",
+  "files": [
+    "index.js",
+    "config.json",
+    "tasks"
+  ],
+  "scripts": {
+    "sync": "./index.js",
+    "lint": "eslint . --ext .js --fix",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "mrm-core": "^0.2.2"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "devDependencies": {
+    "eslint": "^3.14.1",
+    "eslint-config-webpack": "^1.0.0",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}
