@@ -10,6 +10,6 @@ const files = [
 module.exports = () => {
   files.forEach((file) => {
     console.log(chalk.green(`Copy ${file}`)); // eslint-disable-line no-console
-    cpFile(path.resolve(__dirname, '..', file), file);
+    cpFile.sync(path.resolve(__dirname, '..', file), file);
   });
 };
