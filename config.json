@@ -1,6 +1,7 @@
 {
     "tasks": [
         "package",
+        "templates",
         "gitignore",
         "editorconfig",
         "eslint"

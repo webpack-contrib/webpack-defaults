@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "chalk": "^1.1.3",
+    "cp-file": "^4.1.1",
     "mrm-core": "^0.2.2"
   },
   "keywords": [
