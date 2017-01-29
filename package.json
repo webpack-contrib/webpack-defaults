@@ -16,7 +16,8 @@
   "files": [
     "index.js",
     "config.json",
-    "tasks"
+    "tasks",
+    ".github"
   ],
   "scripts": {
     "sync": "./index.js",
