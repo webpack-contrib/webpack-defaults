@@ -1,6 +1,5 @@
 const path = require('path');
-const cpFile = require('cp-file');
-const chalk = require('chalk');
+const { copyFiles } = require('mrm-core');
 
 const files = [
   '.github/ISSUE_TEMPLATE.md',
@@ -8,8 +7,5 @@ const files = [
 ];
 
 module.exports = () => {
-  files.forEach((file) => {
-    console.log(chalk.green(`Copy ${file}`)); // eslint-disable-line no-console
-    cpFile.sync(path.resolve(__dirname, '..', file), file);
-  });
+  copyFiles(path.resolve(__dirname, '..'), files);
 };
