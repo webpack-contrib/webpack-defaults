@@ -1,10 +1,4 @@
-const { json, lines, install } = require('mrm-core');
-
-const packages = [
-  'eslint',
-  'eslint-plugin-import',
-  'eslint-config-webpack',
-];
+const { json, lines } = require('mrm-core');
 
 module.exports = () => {
   // .eslintrc
@@ -23,7 +17,4 @@ module.exports = () => {
     ])
     .save()
   ;
-
-  // Dependencies
-  install(packages);
 };

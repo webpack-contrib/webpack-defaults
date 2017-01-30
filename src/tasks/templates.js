@@ -7,5 +7,5 @@ const files = [
 ];
 
 module.exports = () => {
-  copyFiles(path.resolve(__dirname, '..'), files);
+  copyFiles(path.resolve(__dirname, '../..'), files);
 };

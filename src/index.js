@@ -3,7 +3,7 @@
 /* eslint-disable no-console, global-require, import/no-dynamic-require */
 
 const chalk = require('chalk');
-const config = require('./config.json');
+const config = require('../config.json');
 
 console.log(chalk.cyan.bold('Synchronizing config files...'));
 

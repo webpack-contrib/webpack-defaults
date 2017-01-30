@@ -2,8 +2,10 @@
     "tasks": [
         "package",
         "templates",
-        "gitignore",
+        "git",
         "editorconfig",
-        "eslint"
+        "babel",
+        "eslint",
+        "travis"
     ]
 }

@@ -12,28 +12,46 @@
   "engines": {
     "node": ">=6"
   },
-  "bin": "index.js",
+  "bin": "dist/index.js",
   "files": [
-    "index.js",
+    "dist",
     "config.json",
-    "tasks",
     ".github"
   ],
   "scripts": {
-    "sync": "./index.js",
-    "lint": "eslint . --ext .js --fix",
-    "test": "npm run lint"
+    "sync": "./dist/index.js",
+    "lint": "eslint --cache src test",
+    "test": "jest",
+    "prebuild": "npm run clean:dist",
+    "build": "cross-env NODE_ENV=production babel -s true src -d dist --ignore 'src/**/*.test.js'",
+    "clean:dist": "del-cli dist",
+    "start": "npm run serve:dev src",
+    "serve:dev": "nodemon $2 --exec babel-node",
+    "security": "nsp check",
+    "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage",
+    "travis:test": "yarn run test",
+    "travis:coverage": "yarn run test:coverage",
+    "travis:lint": "yarn run lint && yarn run nsp"
   },
   "dependencies": {
     "chalk": "^1.1.3",
-    "mrm-core": "^0.3.0"
+    "mrm-core": "^0.3.2"
   },
   "keywords": [
     "webpack"
   ],
   "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-jest": "^18.0.0",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-webpack": "^1.0.0",
+    "cross-env": "^3.1.4",
+    "del-cli": "^0.2.1",
     "eslint": "^3.14.1",
     "eslint-config-webpack": "^1.0.0",
-    "eslint-plugin-import": "^2.2.0"
+    "eslint-plugin-import": "^2.2.0",
+    "jest": "^18.1.0",
+    "nodemon": "^1.11.0",
+    "nsp": "^2.6.2"
   }
 }

@@ -1,6 +1,6 @@
 const { lines } = require('mrm-core');
 
-const ignores = [
+const gitignore = [
   // Logs
   'logs',
   '*.log',
@@ -23,9 +23,20 @@ const ignores = [
   '*.sublime-workspace',
 ];
 
+const gitattributes = [
+  'yarn.lock -diff',
+  '* text=auto',
+  'bin/* eol=lf',
+];
+
 module.exports = () => {
   lines('.gitignore')
-    .append(ignores)
+    .append(gitignore)
+    .save()
+  ;
+
+  lines('.gitattributes')
+    .append(gitattributes)
     .save()
   ;
 };
