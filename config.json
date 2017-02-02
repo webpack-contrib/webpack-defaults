@@ -2,6 +2,7 @@
     "tasks": [
         "package",
         "templates",
+        "readme",
         "git",
         "editorconfig",
         "babel",
