@@ -41,9 +41,11 @@ npm run webpack-defaults
   <tbody>
     <tr>
       <td align="center">
-        <img width="150" height="150" src="https://avatars.githubusercontent.com/u/70067?v=3">
-        </br>
-        <a href="https://github.com/sapegin">Artem Sapegin</a>
+        <a href="https://github.com/sapegin">
+          <img width="150" height="150" src="https://avatars.githubusercontent.com/u/70067?v=3">
+          </br>
+          Artem Sapegin
+        </a>
       </td>
     </tr>
   <tbody>
