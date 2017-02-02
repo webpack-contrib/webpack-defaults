@@ -7,9 +7,9 @@
 
 <div align="center">
   <!-- replace with accurate logo e.g from https://worldvectorlogo.com/ -->
-  <img width="200" height="200" src="http://piq.codeus.net/static/media/userpics/piq_59150_400x400.png">
+  <img width="200" height="200" src="https://cdn.worldvectorlogo.com/logos/javascript.svg">
   <a href="https://webpack.js.org/">
-    <img width="200" height="200" vspace="" hspace="25" src="https://worldvectorlogo.com/logos/webpack.svg">
+    <img width="200" height="200" vspace="" hspace="25" src="https://cdn.rawgit.com/webpack/media/e7485eb2/logo/icon-square-big.svg">
   </a>
   <h1>${package}</h1>
   <p>${description}</p>
