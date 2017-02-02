@@ -44,7 +44,7 @@ module.exports = () => {
       },
       'pre-commit': 'lint-staged',
       'lint-staged': {
-        '*.js': 'eslint --fix',
+        '*.js': ['eslint --fix', 'git add'],
       },
     })
     .save()
