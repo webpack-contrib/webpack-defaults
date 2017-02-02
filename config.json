@@ -1,12 +1,12 @@
 {
     "tasks": [
-        "package",
         "templates",
         "readme",
         "git",
         "editorconfig",
         "babel",
         "eslint",
-        "travis"
+        "travis",
+        "package"
     ]
 }

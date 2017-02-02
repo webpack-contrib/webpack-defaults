@@ -20,6 +20,8 @@ const packages = [
   'eslint',
   'eslint-plugin-import',
   'eslint-config-webpack',
+  'lint-staged',
+  'pre-commit',
 ];
 
 module.exports = () => {
@@ -38,6 +40,11 @@ module.exports = () => {
         'travis:test': 'yarn run test',
         'travis:coverage': 'yarn run test:coverage',
         'travis:lint': 'yarn run lint && yarn run nsp',
+        'lint-staged': 'lint-staged',
+      },
+      'pre-commit': 'lint-staged',
+      'lint-staged': {
+        '*.js': 'eslint --fix',
       },
     })
     .save()
