@@ -18,7 +18,7 @@
 ```bash
 npm install --save-dev webpack-defaults
 ```
-
+Do EEET
 Add to your `package.json`:
 
 ```json
