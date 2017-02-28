@@ -28,6 +28,7 @@ module.exports = () => {
   json('package.json')
     .merge({
       engines: {
+        // Some versions are skipped because of known issues, see https://github.com/webpack-contrib/organization/issues/7
         node: '>=4.3.0 <5.0.0 || >=5.10'
       },
       scripts: {
