@@ -3,6 +3,9 @@ const { yaml } = require('mrm-core');
 module.exports = () => {
   // .travis.yml
   yaml('.travis.yml')
+    // WARNING: Remove previous values (otherwise could have duplicates like npm run + yarn run on update)
+    .set('before_script', [])
+    .set('script', [])
     .merge({
       sudo: false,
       language: 'node_js',
@@ -19,8 +22,17 @@ module.exports = () => {
         'node --version',
       ],
       before_script: [
-        'if [ "$WEBPACK_VERSION" ]; then yarn add webpack@^$WEBPACK_VERSION; fi',
-        'if [ "$BITHOUND_CHECK" ]; then npm install -g bithound; bithound check git@github.com:$TRAVIS_REPO_SLUG.git; fi',
+        `
+if [ "$WEBPACK_VERSION" ]; then
+  yarn add webpack@^$WEBPACK_VERSION
+fi
+`.trim(),
+        `
+if [ "$BITHOUND_CHECK" ]; then
+  yarn global add bithound
+  bithound check git@github.com:$TRAVIS_REPO_SLUG.git
+fi
+`.trim(),
       ],
       script: [
         'yarn run travis:$JOB_PART',
