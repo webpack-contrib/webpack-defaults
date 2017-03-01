@@ -5,6 +5,7 @@ const gitignore = [
   'logs',
   '*.log',
   'npm-debug.log*',
+  'yarn-debug.log*',
   '.eslintcache',
 
   //

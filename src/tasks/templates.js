@@ -9,6 +9,13 @@ const files = [
   '.github/PULL_REQUEST_TEMPLATE.md',
 ];
 
+// These files will by created only once
+const filesOnce = [
+  'src/index.js',
+];
+
 module.exports = () => {
-  copyFiles(path.resolve(__dirname, '../../templates'), files);
+  const templatesDir = path.resolve(__dirname, '../../templates');
+  copyFiles(templatesDir, files);
+  copyFiles(templatesDir, filesOnce, { overwrite: false });
 };
