@@ -31,12 +31,12 @@ const gitattributes = [
 
 module.exports = () => {
   lines('.gitignore')
-    .append(gitignore)
+    .add(gitignore)
     .save()
   ;
 
   lines('.gitattributes')
-    .append(gitattributes)
+    .add(gitattributes)
     .save()
   ;
 };

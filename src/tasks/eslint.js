@@ -11,7 +11,7 @@ module.exports = () => {
 
   // .eslintignore
   lines('.eslintignore')
-    .append([
+    .add([
       '/node_modules',
       '/dist',
     ])

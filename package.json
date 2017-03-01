@@ -1,6 +1,6 @@
 {
   "name": "webpack-defaults",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Defaults to be shared across webpack projects",
   "author": {
     "name": "Artem Sapegin",
@@ -38,23 +38,23 @@
   },
   "dependencies": {
     "chalk": "^1.1.3",
-    "mrm-core": "^0.3.2"
+    "mrm-core": "^1.0.0"
   },
   "keywords": [
     "webpack"
   ],
   "devDependencies": {
-    "babel-cli": "^6.22.2",
-    "babel-jest": "^18.0.0",
-    "babel-polyfill": "^6.22.0",
+    "babel-cli": "^6.23.0",
+    "babel-jest": "^19.0.0",
+    "babel-polyfill": "^6.23.0",
     "babel-preset-webpack": "^1.0.0",
     "cross-env": "^3.1.4",
     "del-cli": "^0.2.1",
-    "eslint": "^3.14.1",
+    "eslint": "^3.16.0",
     "eslint-config-webpack": "^1.0.0",
     "eslint-plugin-import": "^2.2.0",
-    "jest": "^18.1.0",
-    "lint-staged": "^3.3.0",
+    "jest": "^19.0.1",
+    "lint-staged": "^3.3.1",
     "nodemon": "^1.11.0",
     "nsp": "^2.6.2",
     "pre-commit": "^1.2.2"
