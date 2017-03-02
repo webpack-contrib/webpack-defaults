@@ -32,6 +32,7 @@ module.exports = () => {
         node: '>=4.3.0 <5.0.0 || >=5.10',
       },
       scripts: {
+        prepublish: 'yarn run build',
         prebuild: 'yarn run clean:dist',
         build: "cross-env NODE_ENV=production babel -s true src -d dist --ignore 'src/**/*.test.js'",
         'clean:dist': 'del-cli dist',
