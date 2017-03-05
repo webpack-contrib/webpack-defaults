@@ -1,5 +1,33 @@
 sudo: false
 language: node_js
-node_js:
-  - 6
-  - 7
+branches:
+  only:
+    - master
+matrix:
+  fast_finish: true
+  include:
+    - os: linux
+      node_js: '7'
+      env: BITHOUND_CHECK=true JOB_PART=lint
+    - os: linux
+      node_js: '4.3'
+      env: JOB_PART=test
+    - os: linux
+      node_js: '6'
+      env: JOB_PART=test
+    - os: linux
+      node_js: '7'
+      env: JOB_PART=coverage
+before_install:
+  - nvm --version
+  - node --version
+before_script:
+  - |-
+    if [ "$BITHOUND_CHECK" ]; then
+      yarn global add bithound
+      bithound check git@github.com:$TRAVIS_REPO_SLUG.git
+    fi
+script:
+  - 'yarn run travis:$JOB_PART'
+after_success:
+  - 'bash <(curl -s https://codecov.io/bash)'
