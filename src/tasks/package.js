@@ -29,13 +29,14 @@ module.exports = () => {
     .merge({
       engines: {
         // Some versions are skipped because of known issues, see https://github.com/webpack-contrib/organization/issues/7
-        node: '>=4.3.0 <5.0.0 || >=5.10'
+        node: '>=4.3.0 <5.0.0 || >=5.10',
       },
       scripts: {
-        prebuild: 'npm run clean:dist',
+        prepublish: 'yarn run build',
+        prebuild: 'yarn run clean:dist',
         build: "cross-env NODE_ENV=production babel -s true src -d dist --ignore 'src/**/*.test.js'",
         'clean:dist': 'del-cli dist',
-        start: 'npm run serve:dev src',
+        start: 'yarn run serve:dev src',
         'serve:dev': 'nodemon $2 --exec babel-node',
         lint: 'eslint --cache src test',
         security: 'nsp check',
@@ -46,6 +47,10 @@ module.exports = () => {
         'travis:lint': 'yarn run lint && yarn run nsp',
         'lint-staged': 'lint-staged',
       },
+      main: 'dist/index.js',
+      files: [
+        'dist',
+      ],
       'pre-commit': 'lint-staged',
       'lint-staged': {
         '*.js': ['eslint --fix', 'git add'],
@@ -56,4 +61,3 @@ module.exports = () => {
 
   install(packages);
 };
-
