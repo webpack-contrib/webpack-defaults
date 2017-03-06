@@ -12,15 +12,17 @@
   "engines": {
     "node": ">=4.3 <5.0.0 || >=5.10"
   },
-  "bin": "dist/index.js",
+  "bin": "bin/index.js",
   "files": [
+    "bin",
     "dist",
     "lib",
+    "src",
     "templates",
     "config.json"
   ],
   "scripts": {
-    "sync": "./dist/index.js",
+    "webpack-defaults": "./dist/index.js",
     "lint": "eslint --cache src test",
     "test": "jest",
     "prebuild": "yarn run clean:dist",
