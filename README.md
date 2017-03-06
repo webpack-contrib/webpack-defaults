@@ -19,21 +19,13 @@
 npm install --save-dev webpack-defaults
 ```
 
-Add to your `package.json`:
-
-```json
-{
-  "scripts": {
-    "webpack-defaults": "webpack-defaults"
-  }
-}
-```
-
-<h2 align="center">Usage</h2>
+This will write a npm script you can run through
 
 ```bash
 npm run webpack-defaults
 ```
+
+Any time you want to sync your project with the defaults, update this dependency and run the command again.
 
 <h2 align="center">Maintainers</h2>
 
