@@ -29,6 +29,7 @@
     "postinstall": "node lib/post_install.js",
     "build": "cross-env NODE_ENV=production babel -s true src -d dist --ignore 'src/**/*.test.js'",
     "clean:dist": "del-cli dist",
+    "release": "yarn run standard-version",
     "start": "yarn run serve:dev src",
     "serve:dev": "nodemon $2 --exec babel-node",
     "security": "nsp check",
