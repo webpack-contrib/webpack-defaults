@@ -12,7 +12,7 @@
   "engines": {
     "node": ">=4"
   },
-  "bin": "dist/index.js",
+  "bin": "bin/index.js",
   "files": [
     "dist",
     "lib",
@@ -24,7 +24,6 @@
     "lint": "eslint --cache src test",
     "test": "jest",
     "prebuild": "yarn run clean:dist",
-    "preinstall": "node lib/pre_install.js",
     "postinstall": "node lib/post_install.js",
     "build": "cross-env NODE_ENV=production babel -s true src -d dist --ignore 'src/**/*.test.js'",
     "clean:dist": "del-cli dist",
