@@ -14,7 +14,7 @@ const packages = [
   // Babel
   'babel-cli',
   'babel-polyfill',
-  'babel-preset-webpack',
+  'babel-preset-env',
 
   // ESLint
   'eslint',
