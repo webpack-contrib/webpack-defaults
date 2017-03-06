@@ -3,7 +3,8 @@ logs
 npm-debug.log*
 .eslintcache
 /coverage
-/dist
+./dist
+!./dist/index.js
 /local
 /reports
 /node_modules
