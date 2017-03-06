@@ -8,5 +8,6 @@
         "eslint",
         "travis",
         "package"
-    ]
+    ],
+    "minNode": 4.3
 }
