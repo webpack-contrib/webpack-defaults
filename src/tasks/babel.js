@@ -1,6 +1,6 @@
 const { json } = require('mrm-core');
 
-module.exports = () => {
+module.exports = (config) => {
   // .babelrc
   json('.babelrc')
     .merge({
@@ -9,7 +9,7 @@ module.exports = () => {
           modules: false,
           useBuiltIns: true,
           // Target maintained to match minimum Webpack Nodejs version.
-          targets: { node: 4.3 },
+          targets: { node: config.minNode },
           exclude: [
             'transform-async-to-generator',
             'transform-regenerator',

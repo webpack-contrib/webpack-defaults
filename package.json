@@ -10,7 +10,7 @@
   "repository": "webpack-contrib/webpack-defaults",
   "license": "MIT",
   "engines": {
-    "node": ">=4"
+    "node": ">=4.3 <5.0.0 || >=5.10"
   },
   "bin": "dist/index.js",
   "files": [
