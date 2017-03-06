@@ -1,6 +1,6 @@
 const { yaml } = require('mrm-core');
 
-module.exports = () => {
+module.exports = (config) => {
   // .travis.yml
   yaml('.travis.yml')
     // WARNING: Remove previous values (otherwise could have duplicates like npm run + yarn run on update)
@@ -50,7 +50,7 @@ fi
       },
       {
         os: 'linux',
-        node_js: '4.3',
+        node_js: String(config.minNode),
         env: 'WEBPACK_VERSION="2.2.0" JOB_PART=test',
       },
       {
