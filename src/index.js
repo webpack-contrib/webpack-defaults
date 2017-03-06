@@ -5,13 +5,15 @@
 const chalk = require('chalk');
 const config = require('../config.json');
 
-console.log(chalk.cyan.bold('Synchronizing config files...'));
+module.exports = function webpackDefaults() {
+  console.log(chalk.cyan.bold('Synchronizing config files...'));
 
-config.tasks.forEach((task) => {
-  const module = require(`./tasks/${task}`);
-  module(config);
-});
+  config.tasks.forEach((task) => {
+    const module = require(`./tasks/${task}`);
+    module(config);
+  });
 
-console.log();
-console.log('Done. Happy webpacking!');
-console.log();
+  console.log();
+  console.log('Done. Happy webpacking!');
+  console.log();
+};
