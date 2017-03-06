@@ -20,7 +20,7 @@
     "config.json"
   ],
   "scripts": {
-    "sync": "./dist/index.js",
+    "webpack-defaults": "./dist/index.js",
     "lint": "eslint --cache src test",
     "test": "jest",
     "prebuild": "yarn run clean:dist",
