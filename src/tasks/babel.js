@@ -12,15 +12,15 @@ module.exports = () => {
           targets: { node: 4.3 },
           exclude: [
             'transform-async-to-generator',
-            'transform-regenerator'
-          ]
-        }]
+            'transform-regenerator',
+          ],
+        }],
       ],
       env: {
         test: {
           // Transformation of es2015 modules are needed for Jest.
-          presets: ['env']
-        }
+          presets: ['env'],
+        },
       },
     })
     .save()
