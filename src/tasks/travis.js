@@ -27,12 +27,6 @@ if [ "$WEBPACK_VERSION" ]; then
   yarn add webpack@^$WEBPACK_VERSION
 fi
 `.trim(),
-        `
-if [ "$BITHOUND_CHECK" ]; then
-  yarn global add bithound
-  bithound check git@github.com:$TRAVIS_REPO_SLUG.git
-fi
-`.trim(),
       ],
       script: [
         'yarn run travis:$JOB_PART',
@@ -46,7 +40,7 @@ fi
       {
         os: 'linux',
         node_js: '7',
-        env: 'WEBPACK_VERSION="2.2.0" BITHOUND_CHECK=true JOB_PART=lint',
+        env: 'WEBPACK_VERSION="2.2.0" JOB_PART=lint',
       },
       {
         os: 'linux',

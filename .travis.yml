@@ -8,7 +8,7 @@ matrix:
   include:
     - os: linux
       node_js: '7'
-      env: BITHOUND_CHECK=true JOB_PART=lint
+      env: JOB_PART=lint
     - os: linux
       node_js: '4.3'
       env: JOB_PART=test
@@ -21,12 +21,6 @@ matrix:
 before_install:
   - nvm --version
   - node --version
-before_script:
-  - |-
-    if [ "$BITHOUND_CHECK" ]; then
-      yarn global add bithound
-      bithound check git@github.com:$TRAVIS_REPO_SLUG.git
-    fi
 script:
   - 'yarn run travis:$JOB_PART'
 after_success:

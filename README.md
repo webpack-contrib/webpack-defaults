@@ -2,7 +2,6 @@
 [![deps][deps]][deps-url]
 [![test][test]][test-url]
 [![coverage][cover]][cover-url]
-[![quality][quality]][quality-url]
 [![chat][chat]][chat-url]
 
 <div align="center">
@@ -57,6 +56,3 @@ Any time you want to sync your project with the defaults, update this dependency
 
 [cover]: https://codecov.io/gh/webpack-contrib/webpack-defaults/branch/master/graph/badge.svg
 [cover-url]: https://codecov.io/gh/webpack-contrib/webpack-defaults
-
-[quality]: https://www.bithound.io/github/webpack-contrib/webpack-defaults/badges/score.svg
-[quality-url]: https://www.bithound.io/github/webpack-contrib/webpack-defaults

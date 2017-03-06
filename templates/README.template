@@ -2,7 +2,6 @@
 [![deps][deps]][deps-url]
 [![test][test]][test-url]
 [![coverage][cover]][cover-url]
-[![quality][quality]][quality-url]
 [![chat][chat]][chat-url]
 
 <div align="center">
@@ -111,6 +110,3 @@ https://api.github.com/users/MAINTAINER
 
 [cover]: https://codecov.io/gh/webpack-contrib/${package}/branch/master/graph/badge.svg
 [cover-url]: https://codecov.io/gh/webpack-contrib/${package}
-
-[quality]: https://www.bithound.io/github/webpack-contrib/${package}/badges/score.svg
-[quality-url]: https://www.bithound.io/github/webpack-contrib/${package}
