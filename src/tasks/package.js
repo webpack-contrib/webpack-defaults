@@ -46,7 +46,7 @@ module.exports = () => {
         test: 'jest',
         'test:coverage': "jest --collectCoverageFrom='src/**/*.js' --coverage",
         'travis:coverage': 'yarn run test:coverage',
-        'travis:lint': 'yarn run lint && yarn run nsp',
+        'travis:lint': 'yarn run lint && yarn run security',
         'travis:test': 'yarn run test',
       },
       main: 'dist/index.js',
