@@ -17,6 +17,7 @@
     "bin",
     "dist",
     "lib",
+    "src",
     "templates",
     "config.json"
   ],
