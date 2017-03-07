@@ -22,7 +22,7 @@
     "config.json"
   ],
   "scripts": {
-    "webpack-defaults": "./dist/index.js",
+    "webpack-defaults": "./bin/index.js",
     "lint": "eslint --cache src test",
     "test": "jest",
     "prebuild": "yarn run clean:dist",
@@ -37,11 +37,12 @@
     "travis:test": "yarn run test",
     "travis:coverage": "yarn run test:coverage",
     "travis:lint": "yarn run lint && yarn run security",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "prepublish": "yarn run build"
   },
   "dependencies": {
     "chalk": "^1.1.3",
-    "mrm-core": "^1.0.0"
+    "mrm-core": "^1.1.0"
   },
   "keywords": [
     "webpack"
@@ -69,5 +70,6 @@
       "eslint --fix",
       "git add"
     ]
-  }
+  },
+  "main": "dist/index.js"
 }
