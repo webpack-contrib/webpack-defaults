@@ -7,6 +7,7 @@ module.exports = (config) => {
       presets: [
         ['env', {
           modules: false,
+          modules: commonjs,
           useBuiltIns: true,
           // Target maintained to match minimum Webpack Nodejs version.
           targets: { node: config.minNode },
