@@ -1,9 +1,9 @@
 const { json, lines } = require('mrm-core');
 
 module.exports = () => {
-  // .eslintrc
+  // .eslintrc: overwrite
   json('.eslintrc')
-    .merge({
+    .set({
       extends: 'webpack',
     })
     .save()
