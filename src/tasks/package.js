@@ -49,7 +49,7 @@ module.exports = (config) => {
         'travis:lint': 'yarn run lint && yarn run security',
         'travis:test': 'yarn run test',
       },
-      main: 'dist/index.js',
+      main: 'dist/cjs.js',
       files: [
         'dist',
       ],
