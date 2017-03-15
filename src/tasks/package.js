@@ -44,6 +44,7 @@ module.exports = (config) => {
         security: 'nsp check',
         'serve:dev': 'nodemon $2 --exec babel-node',
         test: 'jest',
+        'test:watch': 'jest --watch',
         'test:coverage': "jest --collectCoverageFrom='src/**/*.js' --coverage",
         'travis:coverage': 'yarn run test:coverage',
         'travis:lint': 'yarn run lint && yarn run security',
