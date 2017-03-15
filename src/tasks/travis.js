@@ -3,10 +3,8 @@ const { yaml } = require('mrm-core');
 module.exports = (config) => {
   // .travis.yml
   yaml('.travis.yml')
-    // WARNING: Remove previous values (otherwise could have duplicates like npm run + yarn run on update)
-    .set('before_script', [])
-    .set('script', [])
-    .merge({
+    // Overwrite
+    .set({
       sudo: false,
       language: 'node_js',
       branches: {
@@ -16,6 +14,28 @@ module.exports = (config) => {
       },
       matrix: {
         fast_finish: true,
+        include: [
+          {
+            os: 'linux',
+            node_js: '7',
+            env: 'WEBPACK_VERSION="2.2.0" JOB_PART=lint',
+          },
+          {
+            os: 'linux',
+            node_js: String(config.minNode),
+            env: 'WEBPACK_VERSION="2.2.0" JOB_PART=test',
+          },
+          {
+            os: 'linux',
+            node_js: '6',
+            env: 'WEBPACK_VERSION="2.2.0" JOB_PART=test',
+          },
+          {
+            os: 'linux',
+            node_js: '7',
+            env: 'WEBPACK_VERSION="2.2.0" JOB_PART=coverage',
+          },
+        ],
       },
       before_install: [
         'nvm --version',
@@ -35,29 +55,6 @@ fi
         'bash <(curl -s https://codecov.io/bash)',
       ],
     })
-    // Overwrite
-    .set('matrix.include', [
-      {
-        os: 'linux',
-        node_js: '7',
-        env: 'WEBPACK_VERSION="2.2.0" JOB_PART=lint',
-      },
-      {
-        os: 'linux',
-        node_js: String(config.minNode),
-        env: 'WEBPACK_VERSION="2.2.0" JOB_PART=test',
-      },
-      {
-        os: 'linux',
-        node_js: '6',
-        env: 'WEBPACK_VERSION="2.2.0" JOB_PART=test',
-      },
-      {
-        os: 'linux',
-        node_js: '7',
-        env: 'WEBPACK_VERSION="2.2.0" JOB_PART=coverage',
-      },
-    ])
     .save()
   ;
 };
