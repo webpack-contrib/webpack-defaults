@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/webpack-contrib/webpack-defaults/compare/v0.2.1...v0.3.0) (2017-03-15)
+
+
+### Bug Fixes
+
+* overwrite .eslintrc ([0806980](https://github.com/webpack-contrib/webpack-defaults/commit/0806980))
+* target cjs.js in package template main prop ([d567b6d](https://github.com/webpack-contrib/webpack-defaults/commit/d567b6d))
+
+
+### Features
+
+* add commonjs proxy for es modules ([c770665](https://github.com/webpack-contrib/webpack-defaults/commit/c770665))
+
+
+
 <a name="0.2.1"></a>
 # [0.2.1](https://github.com/webpack-contrib/webpack-defaults/compare/v0.2.0...v0.2.1) (2017-03-06)
 

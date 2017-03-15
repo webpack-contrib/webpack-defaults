@@ -1,6 +1,6 @@
 {
   "name": "webpack-defaults",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Defaults to be shared across webpack projects",
   "author": {
     "name": "Artem Sapegin",
