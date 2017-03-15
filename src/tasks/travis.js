@@ -1,6 +1,8 @@
 const { yaml } = require('mrm-core');
 
 module.exports = (config) => {
+  const jobEnv = name => `WEBPACK_VERSION="${config.webpackVersion}" JOB_PART=${name}`;
+
   // .travis.yml
   yaml('.travis.yml')
     // Overwrite
@@ -18,22 +20,22 @@ module.exports = (config) => {
           {
             os: 'linux',
             node_js: '7',
-            env: 'WEBPACK_VERSION="2.2.0" JOB_PART=lint',
+            env: jobEnv('lint'),
           },
           {
             os: 'linux',
-            node_js: String(config.minNode),
-            env: 'WEBPACK_VERSION="2.2.0" JOB_PART=test',
+            node_js: config.minNode,
+            env: jobEnv('test'),
           },
           {
             os: 'linux',
             node_js: '6',
-            env: 'WEBPACK_VERSION="2.2.0" JOB_PART=test',
+            env: jobEnv('test'),
           },
           {
             os: 'linux',
             node_js: '7',
-            env: 'WEBPACK_VERSION="2.2.0" JOB_PART=coverage',
+            env: jobEnv('coverage'),
           },
         ],
       },

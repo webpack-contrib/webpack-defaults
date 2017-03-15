@@ -9,7 +9,7 @@ module.exports = (config) => {
           modules: false,
           useBuiltIns: true,
           // Target maintained to match minimum Webpack Nodejs version.
-          targets: { node: config.minNode },
+          targets: { node: parseFloat(config.minNode) },
           exclude: [
             'transform-async-to-generator',
             'transform-regenerator',
