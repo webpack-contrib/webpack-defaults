@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.2"></a>
+## [0.4.2](https://github.com/webpack-contrib/webpack-defaults/compare/v0.4.1...v0.4.2) (2017-03-16)
+
+
+### Bug Fixes
+
+* **babel:** Adds object-rest-spread to env ([2d0f980](https://github.com/webpack-contrib/webpack-defaults/commit/2d0f980))
+
+
+
 <a name="0.4.1"></a>
 ## [0.4.1](https://github.com/webpack-contrib/webpack-defaults/compare/v0.4.0...v0.4.1) (2017-03-15)
 
