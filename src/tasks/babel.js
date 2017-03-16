@@ -16,10 +16,14 @@ module.exports = (config) => {
           ],
         }],
       ],
+      plugins: [
+        ['transform-object-rest-spread', { useBuiltIns: true }],
+      ],
       env: {
         test: {
           // Transformation of es2015 modules are needed for Jest.
           presets: ['env'],
+          plugins: ['transform-object-rest-spread'],
         },
       },
     })

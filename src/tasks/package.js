@@ -16,6 +16,7 @@ const packages = [
   'babel-cli',
   'babel-polyfill',
   'babel-preset-env',
+  'babel-plugin-transform-object-rest-spread',
 
   // ESLint
   'eslint',
