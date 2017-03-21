@@ -31,11 +31,11 @@ module.exports = (config) => {
     .merge({
       engines: {
         // Some versions are skipped because of known issues, see https://github.com/webpack-contrib/organization/issues/7
-        node: `>=${config.minNode} <5.0.0 || >=5.10`,
+        node: `>= ${config.minNode} < 5.0.0 || >= 5.10`,
       },
       scripts: {
         start: 'yarn run serve:dev src',
-        build: "cross-env NODE_ENV=production babel -s true src -d dist --ignore 'src/**/*.test.js'",
+        build: "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js'",
         'clean:dist': 'del-cli dist',
         lint: 'eslint --cache src test',
         'lint-staged': 'lint-staged',

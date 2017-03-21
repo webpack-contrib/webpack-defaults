@@ -6,7 +6,6 @@ module.exports = (config) => {
     .merge({
       presets: [
         ['env', {
-          modules: false,
           useBuiltIns: true,
           // Target maintained to match minimum Webpack Nodejs version.
           targets: { node: parseFloat(config.minNode) },
