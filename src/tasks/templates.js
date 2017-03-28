@@ -11,6 +11,7 @@ const files = [
 // These files will by created only once
 const filesOnce = [
   'src/index.js',
+  'src/cjs.js',
   'CHANGELOG.md',
 ];
 
