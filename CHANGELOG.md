@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.5"></a>
+## [0.4.5](https://github.com/webpack-contrib/webpack-defaults/compare/v0.4.4...v0.4.5) (2017-03-29)
+
+
+### Bug Fixes
+
+* add missing cjs.js to filesOnce ([a52507a](https://github.com/webpack-contrib/webpack-defaults/commit/a52507a))
+
+
+
 <a name="0.4.4"></a>
 ## [0.4.4](https://github.com/webpack-contrib/webpack-defaults/compare/v0.4.3...v0.4.4) (2017-03-21)
 
