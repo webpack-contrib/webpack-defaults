@@ -2,17 +2,7 @@
   "name": "webpack-defaults",
   "version": "0.4.5",
   "description": "Defaults to be shared across webpack projects",
-  "author": {
-    "name": "Artem Sapegin",
-    "url": "http://sapegin.me"
-  },
-  "homepage": "https://github.com/webpack-contrib/webpack-defaults",
-  "repository": "webpack-contrib/webpack-defaults",
-  "license": "MIT",
-  "engines": {
-    "node": ">=4.3 <5.0.0 || >=5.10"
-  },
-  "bin": "bin/index.js",
+  "main": "dist/cjs.js",
   "files": [
     "bin",
     "dist",
@@ -21,6 +11,10 @@
     "templates",
     "config.json"
   ],
+  "engines": {
+    "node": ">= 4.3 < 5.0.0 || >= 5.10"
+  },
+  "bin": "bin/index.js",
   "scripts": {
     "webpack-defaults": "./bin/index.js",
     "lint": "eslint --cache src test",
@@ -45,24 +39,21 @@
     "chalk": "^1.1.3",
     "mrm-core": "^1.1.0"
   },
-  "keywords": [
-    "webpack"
-  ],
   "devDependencies": {
-    "babel-cli": "^6.23.0",
+    "babel-cli": "^6.24.1",
     "babel-jest": "^19.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-polyfill": "^6.23.0",
-    "babel-preset-env": "^1.2.0",
-    "cross-env": "^3.1.4",
+    "babel-preset-env": "^1.4.0",
+    "cross-env": "^4.0.0",
     "del-cli": "^0.2.1",
-    "eslint": "^3.16.0",
-    "eslint-config-webpack": "^1.1.0",
+    "eslint": "^3.19.0",
+    "eslint-config-webpack": "^1.2.1",
     "eslint-plugin-import": "^2.2.0",
-    "jest": "^19.0.1",
-    "lint-staged": "^3.3.1",
+    "jest": "^19.0.2",
+    "lint-staged": "^3.4.0",
     "nodemon": "^1.11.0",
-    "nsp": "^2.6.2",
+    "nsp": "^2.6.3",
     "pre-commit": "^1.2.2",
     "standard-version": "^4.0.0"
   },
@@ -73,5 +64,14 @@
       "git add"
     ]
   },
-  "main": "dist/cjs.js"
+  "author": {
+    "name": "Artem Sapegin",
+    "url": "http://sapegin.me"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "homepage": "https://github.com/webpack-contrib/webpack-defaults",
+  "repository": "webpack-contrib/webpack-defaults",
+  "license": "MIT"
 }
