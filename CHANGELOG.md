@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.6"></a>
+## [0.4.6](https://github.com/webpack-contrib/webpack-defaults/compare/v0.4.2...v0.4.6) (2017-04-29)
+
+
+### Bug Fixes
+
+* **.babelrc:** enable modules ([e9694cb](https://github.com/webpack-contrib/webpack-defaults/commit/e9694cb))
+* **src/tasks/babel:** enable modules ([f85ac12](https://github.com/webpack-contrib/webpack-defaults/commit/f85ac12))
+* **src/tasks/package:** disable sourcemaps in build script ([7ea294b](https://github.com/webpack-contrib/webpack-defaults/commit/7ea294b))
+* add missing cjs.js to filesOnce ([522205f](https://github.com/webpack-contrib/webpack-defaults/commit/522205f))
+* comment issue template ([50065fb](https://github.com/webpack-contrib/webpack-defaults/commit/50065fb))
+
+
+
 <a name="0.4.5"></a>
 ## [0.4.5](https://github.com/webpack-contrib/webpack-defaults/compare/v0.4.4...v0.4.5) (2017-03-29)
 
