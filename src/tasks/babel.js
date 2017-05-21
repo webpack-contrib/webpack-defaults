@@ -8,7 +8,7 @@ module.exports = (config) => {
         ['env', {
           useBuiltIns: true,
           // Target maintained to match minimum Webpack Nodejs version.
-          targets: { node: parseFloat(config.minNode) },
+          targets: { node: config.minNode },
           exclude: [
             'transform-async-to-generator',
             'transform-regenerator',
