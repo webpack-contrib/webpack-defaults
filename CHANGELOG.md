@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/webpack-contrib/webpack-defaults/compare/v0.4.7...v1.0.0) (2017-05-22)
+
+
+### Chores
+
+* **package:** Update to Jest 20 (#52) ([5ec728b](https://github.com/webpack-contrib/webpack-defaults/commit/5ec728b))
+
+
+### BREAKING CHANGES
+
+* **package:** Jest v20.0.0 introduce several breaking changes
+    the most notable is a move to a custom ( rewritten ) version of Jasmine 2.5.
+    This is known to effect at minimum, the test suite for `css-loader/new-loader's parse.test.js`
+
+- Forked Jasmine 2.5 into Jest's own test runner and rewrote large parts of Jasmine.
+- Jest does not write new snapshots by default on CI.
+- Moved the typescript parser from jest-editor-support into a separate jest-test-typescript-parser package.
+- Replaced auto-loading of babel-polyfill with only regenerator-runtime, fixes a major memory leak.
+
+See [Jest v20.0.0 Changelog](https://github.com/facebook/jest/blob/master/CHANGELOG.md#jest-2000) and migration paths.
+
+
+
 <a name="0.4.7"></a>
 ## [0.4.7](https://github.com/webpack-contrib/webpack-defaults/compare/v0.4.6...v0.4.7) (2017-05-22)
 
