@@ -49,5 +49,6 @@ module.exports = (config) => {
         'cmd: npm run appveyor:%job_part%',
       ],
     })
-    .save();
+    .save()
+  ;
 };
