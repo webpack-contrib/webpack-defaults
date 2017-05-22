@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.7"></a>
+## [0.4.7](https://github.com/webpack-contrib/webpack-defaults/compare/v0.4.6...v0.4.7) (2017-05-22)
+
+
+### Bug Fixes
+
+* **babelrc:** Preset node target should be a string (#53) ([2d00bc1](https://github.com/webpack-contrib/webpack-defaults/commit/2d00bc1))
+
+
+
 <a name="0.4.6"></a>
 ## [0.4.6](https://github.com/webpack-contrib/webpack-defaults/compare/v0.4.2...v0.4.6) (2017-04-29)
 
