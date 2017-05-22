@@ -49,6 +49,7 @@ module.exports = (config) => {
         test: 'jest',
         'test:watch': 'jest --watch',
         'test:coverage': "jest --collectCoverageFrom='src/**/*.js' --coverage",
+        'appveyor:test': 'npm run test',
         'travis:lint': 'npm run lint && npm run security',
         'travis:test': 'npm run test -- --runInBand',
         'travis:coverage': 'npm run test:coverage -- --runInBand',
