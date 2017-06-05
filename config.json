@@ -9,6 +9,6 @@
         "travis",
         "package"
     ],
-    "webpackVersion": "2.2.0",
+    "webpackVersion": "2.6.0",
     "minNode": "4.3"
 }
