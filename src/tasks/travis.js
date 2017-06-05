@@ -19,7 +19,7 @@ module.exports = (config) => {
         include: [
           {
             os: 'linux',
-            node_js: '7',
+            node_js: config.latestNode,
             env: jobEnv('lint'),
           },
           {
@@ -29,29 +29,31 @@ module.exports = (config) => {
           },
           {
             os: 'linux',
-            node_js: '6',
+            node_js: config.latestNodeLTS,
             env: jobEnv('test'),
           },
           {
             os: 'linux',
-            node_js: '7',
+            node_js: config.latestNode,
             env: jobEnv('coverage'),
           },
         ],
       },
       before_install: [
+        'if [[ `npm -v` != 5* ]]; then npm i -g npm@^5.0.0; fi',
         'nvm --version',
         'node --version',
+        'npm --version',
       ],
       before_script: [
         `
 if [ "$WEBPACK_VERSION" ]; then
-  yarn add webpack@^$WEBPACK_VERSION
+  npm i --no-save webpack@^$WEBPACK_VERSION
 fi
 `.trim(),
       ],
       script: [
-        'yarn run travis:$JOB_PART',
+        'npm run travis:$JOB_PART',
       ],
       after_success: [
         'bash <(curl -s https://codecov.io/bash)',

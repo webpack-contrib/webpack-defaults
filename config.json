@@ -10,5 +10,7 @@
         "package"
     ],
     "webpackVersion": "2.6.0",
-    "minNode": "4.3"
+    "minNode": "4.3",
+    "latestNodeLTS": "6",
+    "latestNode": "8"
 }
