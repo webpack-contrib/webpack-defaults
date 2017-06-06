@@ -5,7 +5,6 @@ const gitignore = [
   'logs',
   '*.log',
   'npm-debug.log*',
-  'yarn-debug.log*',
   '.eslintcache',
 
   //
@@ -25,7 +24,7 @@ const gitignore = [
 ];
 
 const gitattributes = [
-  'yarn.lock -diff',
+  'package-lock.json -diff',
   '* text=auto',
   'bin/* eol=lf',
 ];
