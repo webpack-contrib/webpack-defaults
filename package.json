@@ -1,6 +1,6 @@
 {
   "name": "webpack-defaults",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Defaults to be shared across webpack projects",
   "main": "dist/cjs.js",
   "files": [
@@ -23,7 +23,7 @@
     "postinstall": "node lib/post_install.js",
     "build": "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js'",
     "clean:dist": "del-cli dist",
-    "release": "npm run standard-version",
+    "release": "standard-version",
     "start": "npm run serve:dev src",
     "serve:dev": "nodemon $2 --exec babel-node",
     "security": "nsp check",
