@@ -38,6 +38,7 @@ module.exports = (config) => {
       },
       scripts: {
         start: 'npm run build -- -w',
+        'appveyor:test': 'npm run test',
         build: "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js'",
         clean: 'del-cli dist',
         lint: 'eslint --cache src test',
@@ -49,7 +50,6 @@ module.exports = (config) => {
         test: 'jest',
         'test:watch': 'jest --watch',
         'test:coverage': "jest --collectCoverageFrom='src/**/*.js' --coverage",
-        'appveyor:test': 'npm run test',
         'travis:lint': 'npm run lint && npm run security',
         'travis:test': 'npm run test -- --runInBand',
         'travis:coverage': 'npm run test:coverage -- --runInBand',
