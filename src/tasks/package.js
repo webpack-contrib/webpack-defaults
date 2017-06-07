@@ -38,11 +38,11 @@ module.exports = (config) => {
       },
       scripts: {
         start: 'npm run build -- -w',
-        prebuild: 'npm run clean',
         build: "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js'",
         clean: 'del-cli dist',
         lint: 'eslint --cache src test',
         'lint-staged': 'lint-staged',
+        prebuild: 'npm run clean',
         prepublish: 'npm run build',
         release: 'npm run standard-version',
         security: 'nsp check',
@@ -50,8 +50,8 @@ module.exports = (config) => {
         'test:watch': 'jest --watch',
         'test:coverage': "jest --collectCoverageFrom='src/**/*.js' --coverage",
         'travis:lint': 'npm run lint && npm run security',
-        'travis:test': 'npm run test',
-        'travis:coverage': 'npm run test:coverage',
+        'travis:test': 'npm run test -- --runInBand',
+        'travis:coverage': 'npm run test:coverage -- --runInBand',
       },
       'pre-commit': 'lint-staged',
       'lint-staged': {
