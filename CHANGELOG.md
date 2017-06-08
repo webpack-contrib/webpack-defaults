@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/webpack-contrib/webpack-defaults/compare/v1.1.1...v1.2.0) (2017-06-08)
+
+
+### Bug Fixes
+
+* release script should not exec `npm run` (#61) ([542996c](https://github.com/webpack-contrib/webpack-defaults/commit/542996c))
+
+
+### Features
+
+* Adds appveyor build file (#55) ([b0f5110](https://github.com/webpack-contrib/webpack-defaults/commit/b0f5110))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/webpack-contrib/webpack-defaults/compare/v1.1.0...v1.1.1) (2017-06-07)
 
