@@ -16,12 +16,12 @@ module.exports = (config) => {
       environment: {
         matrix: [
           {
-            nodejs_version: '7',
+            nodejs_version: config.latestNode,
             webpack_version: config.webpackVersion,
             job_part: 'test',
           },
           {
-            nodejs_version: '6',
+            nodejs_version: config.latestNodeLTS,
             webpack_version: config.webpackVersion,
             job_part: 'test',
           },
