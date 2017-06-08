@@ -45,7 +45,7 @@ module.exports = (config) => {
         'lint-staged': 'lint-staged',
         prebuild: 'npm run clean',
         prepublish: 'npm run build',
-        release: 'npm run standard-version',
+        release: 'standard-version',
         security: 'nsp check',
         test: 'jest',
         'test:watch': 'jest --watch',
