@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/webpack-contrib/webpack-defaults/compare/v1.2.0...v1.3.0) (2017-06-09)
+
+
+### Bug Fixes
+
+* Adds missing appveyor task in config ([3bf7e89](https://github.com/webpack-contrib/webpack-defaults/commit/3bf7e89))
+
+
+### Features
+
+* Enforce peerDependencies via defaults (#64) ([4374571](https://github.com/webpack-contrib/webpack-defaults/commit/4374571))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/webpack-contrib/webpack-defaults/compare/v1.1.1...v1.2.0) (2017-06-08)
 
