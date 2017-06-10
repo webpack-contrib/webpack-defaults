@@ -6,7 +6,6 @@
         "editorconfig",
         "babel",
         "eslint",
-        "travis",
         "appveyor",
         "package"
     ],

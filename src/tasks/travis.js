@@ -1,3 +1,4 @@
+// This has been moved to ./templates until the anchor & alias issue is resolved
 const { yaml } = require('mrm-core');
 
 module.exports = (config) => {
