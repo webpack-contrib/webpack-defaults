@@ -43,7 +43,6 @@ module.exports = (config) => {
         start: 'npm run build -- -w',
         'appveyor:test': 'npm run test',
         build: "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js'",
-        'build:watch': 'npm run -s build -- -w',
         clean: 'del-cli dist',
         lint: 'eslint --cache src test',
         'lint-staged': 'lint-staged',
