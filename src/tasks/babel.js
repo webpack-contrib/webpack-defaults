@@ -1,31 +1,13 @@
 const { json } = require('mrm-core');
+const { buildPreset } = require('../../lib/babel-preset');
 
 module.exports = (config) => {
-  // .babelrc
+  /* eslint-disable multiline-ternary */
+  const babelConfig = typeof config.minNode === 'undefined' || config.minNode === '4.3'
+    ? { presets: ['webpack-defaults/lib/babel-preset'] }
+    : buildPreset(config);
+  /* eslint-enable multiline-ternary */
   json('.babelrc')
-    .merge({
-      presets: [
-        ['env', {
-          useBuiltIns: true,
-          // Target maintained to match minimum Webpack Nodejs version.
-          targets: { node: config.minNode },
-          exclude: [
-            'transform-async-to-generator',
-            'transform-regenerator',
-          ],
-        }],
-      ],
-      plugins: [
-        ['transform-object-rest-spread', { useBuiltIns: true }],
-      ],
-      env: {
-        test: {
-          // Transformation of es2015 modules are needed for Jest.
-          presets: ['env'],
-          plugins: ['transform-object-rest-spread'],
-        },
-      },
-    })
-    .save()
-  ;
+    .merge(babelConfig)
+    .save();
 };
