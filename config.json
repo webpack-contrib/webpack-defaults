@@ -9,7 +9,7 @@
         "appveyor",
         "package"
     ],
-    "webpackVersion": "2.6.0",
+    "webpackVersion": "latest",
     "minNode": "4.3",
     "latestNodeLTS": "6",
     "latestNode": "8"
