@@ -23,7 +23,7 @@ const packages = [
   'eslint-config-webpack',
   'lint-staged',
   'pre-commit',
-  
+
   // Webpack
   'webpack',
 ];
