@@ -41,7 +41,7 @@ module.exports = (config) => {
         'npm install',
       ],
       before_test: [
-        'cmd: npm install webpack@^%webpack_version%',
+        'cmd: npm install webpack@%webpack_version%',
       ],
       test_script: [
         'node --version',
