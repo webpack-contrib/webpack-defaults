@@ -37,7 +37,7 @@ module.exports = (config) => {
         node: `>= ${config.minNode} < 5.0.0 || >= 5.10`,
       },
       peerDependencies: {
-        webpack: '^2.0.0 || >= 3.0.0-rc.0 || ^3.0.0',
+        webpack: '^2.0.0 || ^3.0.0',
       },
       scripts: {
         start: 'npm run build -- -w',
