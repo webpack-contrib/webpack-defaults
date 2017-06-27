@@ -7,7 +7,8 @@
         "babel",
         "eslint",
         "appveyor",
-        "package"
+        "package",
+        "codecov"
     ],
     "webpackVersion": "2.6.0",
     "minNode": "4.3",
