@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/webpack-contrib/webpack-defaults/compare/v1.4.0...v1.5.0) (2017-07-06)
+
+
+### Bug Fixes
+
+* Include was using the deprecated nodejs key (#70) ([197df50](https://github.com/webpack-contrib/webpack-defaults/commit/197df50))
+
+
+### Features
+
+* add `webpack` as a `devDependency` (#76) ([bc8a415](https://github.com/webpack-contrib/webpack-defaults/commit/bc8a415))
+
+
+
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/webpack-contrib/webpack-defaults/compare/v1.3.0...v1.4.0) (2017-06-10)
 
