@@ -9,6 +9,7 @@ const packages = [
 
   // Jest
   'jest',
+  'jest-cli',
   'babel-jest',
 
   // Babel
