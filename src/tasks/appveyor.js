@@ -38,6 +38,7 @@ module.exports = (config) => {
       },
       install: [
         'ps: Install-Product node $env:nodejs_version x64',
+        'npm i -g npm@latest',
         'npm install',
       ],
       before_test: [
