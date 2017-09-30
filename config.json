@@ -11,7 +11,7 @@
         "codecov"
     ],
     "webpackVersion": "latest",
-    "minNode": "4.3",
+    "minNode": "4.8",
     "latestNodeLTS": "6",
     "latestNode": "8"
 }
