@@ -1,11 +1,20 @@
+/* eslint-disable no-template-curly-in-string */
 const { json, install } = require('mrm-core');
 
-const packages = [
+const pacakges = ['schema-utils'];
+
+const devPackages = [
   // Utilities
   'nsp',
+  'del',
   'del-cli',
   'cross-env',
+  'memory-fs',
   'standard-version',
+  '@commitlint/cli',
+  '@commitlint/config-angular',
+  'conventional-github-releaser',
+  'husky',
 
   // Jest
   'jest',
@@ -20,9 +29,11 @@ const packages = [
   // ESLint
   'eslint',
   'eslint-plugin-import',
-  'eslint-config-webpack',
+  'eslint-plugin-prettier',
+  '@webpack-contrib/eslint-config-webpack',
   'lint-staged',
   'pre-commit',
+  'prettier',
 
   // Webpack
   'webpack',
@@ -32,41 +43,44 @@ module.exports = (config) => {
   json('package.json')
     .merge({
       main: 'dist/cjs.js',
-      files: [
-        'dist',
-      ],
+      files: ['dist'],
       engines: {
-        // Some versions are skipped because of known issues, see https://github.com/webpack-contrib/organization/issues/7
-        node: `>= ${config.minNode} < 5.0.0 || >= 5.10`,
+        node: `>= ${config.minNode} || >= ${config.latestNodeLTS}`,
       },
       peerDependencies: {
-        webpack: '^2.0.0 || ^3.0.0',
+        webpack: '^3.0.0 || ^4.0.0',
       },
       scripts: {
         start: 'npm run build -- -w',
-        'appveyor:test': 'npm run test',
-        build: "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js'",
+        build:
+          "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js' --copy-files",
         clean: 'del-cli dist',
+        commitlint: 'commitlint',
+        commitmsg: 'commitlint -e $GIT_PARAMS',
         lint: 'eslint --cache src test',
+        'lint:commits':
+          "commitlint --from=$(git merge-base master '${CIRCLE_BRANCH}')",
         'lint-staged': 'lint-staged',
         prebuild: 'npm run clean',
         prepublish: 'npm run build',
         release: 'standard-version',
+        'release:ci': 'conventional-github-releaser -p angular',
+        'rrelease:validate':
+          'commitlint --from=$(git merge-base master (git describe --tags --abbrev=0))',
         security: 'nsp check',
         test: 'jest',
         'test:watch': 'jest --watch',
         'test:coverage': "jest --collectCoverageFrom='src/**/*.js' --coverage",
-        'travis:lint': 'npm run lint && npm run security',
-        'travis:test': 'npm run test -- --runInBand',
-        'travis:coverage': 'npm run test:coverage -- --runInBand',
+        'ci:lint': 'npm run lint && npm run security',
+        'ci:test': 'npm run test -- --runInBand',
+        'ci:coverage': 'npm run test:coverage -- --runInBand',
       },
       'pre-commit': 'lint-staged',
       'lint-staged': {
         '*.js': ['eslint --fix', 'git add'],
       },
     })
-    .save()
-  ;
-
-  install(packages);
+    .save();
+  install(pacakges, { dev: false });
+  install(devPackages);
 };
