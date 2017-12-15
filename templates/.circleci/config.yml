@@ -57,11 +57,11 @@ jobs:
           command: npm rebuild
       - run:
           name: Run unit tests.
-          command: npm run ci:test
+          command: npm run ci:coverage
       - run:
           name: Submit coverage data to codecov.
           command: bash <(curl -s https://codecov.io/bash)
-          when: always
+          when: on_success
   node6_webpack_latest:
     docker:
       - image: webpackcontrib/circleci-node6:latest
