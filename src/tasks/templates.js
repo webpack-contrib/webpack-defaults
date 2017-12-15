@@ -9,7 +9,7 @@ const files = [
   '.github/PULL_REQUEST_TEMPLATE.md',
   '.prettierrc',
   'appveyor.yml',
-  'eslint.js',
+  'eslintrc.js',
 ];
 
 // These files will by created only once
@@ -21,7 +21,7 @@ const filesOnce = [
   'test/loader.test.js',
   'test/options.test.js',
   'test/fixtures/error.js',
-  'test/fixtures/fixtures.js',
+  'test/fixtures/fixture.js',
   'test/fixtures/foo.js',
   'test/helpers/compiler.js',
   'CHANGELOG.md',
