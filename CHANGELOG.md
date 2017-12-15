@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0-alpha.1"></a>
+# [2.0.0-alpha.1](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-alpha.0...v2.0.0-alpha.1) (2017-12-15)
+
+
+### Bug Fixes
+
+* incorrect eslint config name ([8258ad5](https://github.com/webpack-contrib/webpack-defaults/commit/8258ad5))
+* Readme template badge file extension ([ead2b33](https://github.com/webpack-contrib/webpack-defaults/commit/ead2b33))
+* Run coverage in CircleCI ([05d122a](https://github.com/webpack-contrib/webpack-defaults/commit/05d122a))
+* Update readme template with CircleCI badge ([d1bb56e](https://github.com/webpack-contrib/webpack-defaults/commit/d1bb56e))
+
+
+### Features
+
+* Adds commit lint configuration ([14ac5ac](https://github.com/webpack-contrib/webpack-defaults/commit/14ac5ac))
+
+
+
 <a name="2.0.0-alpha.0"></a>
 # [2.0.0-alpha.0](https://github.com/webpack-contrib/webpack-defaults/compare/v1.6.0...v2.0.0-alpha.0) (2017-12-15)
 
