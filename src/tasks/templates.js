@@ -9,7 +9,7 @@ const files = [
   '.github/PULL_REQUEST_TEMPLATE.md',
   '.prettierrc',
   'appveyor.yml',
-  'eslintrc.js',
+  '.eslintrc.js',
 ];
 
 // These files will by created only once
