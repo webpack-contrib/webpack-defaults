@@ -1,7 +1,7 @@
 /* eslint-disable no-template-curly-in-string */
 const { json, install } = require('mrm-core');
 
-const pacakges = ['schema-utils'];
+const packages = ['schema-utils'];
 
 const devPackages = [
   // Utilities
@@ -81,6 +81,6 @@ module.exports = (config) => {
       },
     })
     .save();
-  install(pacakges, { dev: false });
+  install(packages, { dev: false });
   install(devPackages);
 };
