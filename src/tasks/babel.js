@@ -10,7 +10,7 @@ module.exports = (config) => {
           {
             useBuiltIns: true,
             // Target maintained to match minimum Webpack Nodejs version.
-            targets: { node: config.minNode },
+            targets: { node: config.maintLTS },
             exclude: ['transform-async-to-generator', 'transform-regenerator'],
           },
         ],

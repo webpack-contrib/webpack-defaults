@@ -45,7 +45,7 @@ module.exports = (config) => {
       main: 'dist/cjs.js',
       files: ['dist'],
       engines: {
-        node: `>= ${config.minNode} || >= ${config.latestNodeLTS}`,
+        node: `>= ${config.maintLTS} || >= ${config.activeLTS}`,
       },
       peerDependencies: {
         webpack: '^3.0.0 || ^4.0.0',
