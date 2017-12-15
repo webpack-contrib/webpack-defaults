@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0-beta.0"></a>
+# [2.0.0-beta.0](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-alpha.2...v2.0.0-beta.0) (2017-12-15)
+
+
+### Bug Fixes
+
+* Do no initialize test example if directory exists ([f4bcc3e](https://github.com/webpack-contrib/webpack-defaults/commit/f4bcc3e))
+
+
+
 <a name="2.0.0-alpha.2"></a>
 # [2.0.0-alpha.2](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-alpha.1...v2.0.0-alpha.2) (2017-12-15)
 

@@ -1,6 +1,6 @@
 {
   "name": "webpack-defaults",
-  "version": "2.0.0-alpha.2",
+  "version": "2.0.0-beta.0",
   "description": "Defaults to be shared across webpack projects",
   "main": "dist/cjs.js",
   "files": [
