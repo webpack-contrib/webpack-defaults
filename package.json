@@ -37,7 +37,8 @@
   },
   "dependencies": {
     "chalk": "^2.3.0",
-    "mrm-core": "^2.6.0"
+    "mrm-core": "^2.6.0",
+    "path-exists": "^3.0.0"
   },
   "devDependencies": {
     "@webpack-contrib/eslint-config-webpack": "^2.0.1",
