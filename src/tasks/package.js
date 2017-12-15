@@ -58,15 +58,14 @@ module.exports = (config) => {
         commitlint: 'commitlint',
         commitmsg: 'commitlint -e $GIT_PARAMS',
         lint: 'eslint --cache src test',
-        'lint:commits':
-          "commitlint --from=$(git merge-base master '${CIRCLE_BRANCH}')",
+        'ci:lint:commits': 'commitlint --from=$CIRCLE_BRANCH --to=$CIRCLE_SHA1',
         'lint-staged': 'lint-staged',
         prebuild: 'npm run clean',
         prepublish: 'npm run build',
         release: 'standard-version',
         'release:ci': 'conventional-github-releaser -p angular',
-        'rrelease:validate':
-          'commitlint --from=$(git merge-base master (git describe --tags --abbrev=0))',
+        'release:validate':
+          'commitlint --from=$(git describe --tags --abbrev=0) --to=$(git rev-parse HEAD)',
         security: 'nsp check',
         test: 'jest',
         'test:watch': 'jest --watch',

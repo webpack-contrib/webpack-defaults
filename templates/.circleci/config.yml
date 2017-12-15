@@ -93,7 +93,7 @@ jobs:
           command: npm run security
       - run:
           name: Validate Commit Messages
-          command: npm run lint:commits
+          command: npm run ci:lint:commits
   publish:
     docker:
       - image: webpackcontrib/circleci-node-base:latest
