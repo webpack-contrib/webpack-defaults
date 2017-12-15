@@ -5,7 +5,10 @@ module.exports = () => {
   const pkg = json('package.json');
 
   // Create Readme.md (no update)
-  const readme = template('README.md', path.join(__dirname, '../../templates/README.template'));
+  const readme = template(
+    'README.md',
+    path.join(__dirname, '../../templates/README.template')
+  );
   if (!readme.exists()) {
     readme
       .apply({

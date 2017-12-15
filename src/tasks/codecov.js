@@ -32,6 +32,5 @@ module.exports = () => {
       },
       comment: 'off',
     })
-    .save()
-  ;
+    .save();
 };
