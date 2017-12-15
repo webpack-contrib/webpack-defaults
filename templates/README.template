@@ -105,7 +105,7 @@ https://api.github.com/users/MAINTAINER
 [chat]: https://img.shields.io/badge/gitter-webpack%2Fwebpack-brightgreen.svg
 [chat-url]: https://gitter.im/webpack/webpack
 
-[test]: https://circleci.com/gh/webpack-contrib/${package}.svg.svg?style=svg
+[test]: https://circleci.com/gh/webpack-contrib/${package}.svg?style=svg
 [test-url]: https://circleci.com/gh/webpack-contrib/${package}
 
 [cover]: https://codecov.io/gh/webpack-contrib/${package}/branch/master/graph/badge.svg
