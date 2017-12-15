@@ -58,7 +58,8 @@ module.exports = (config) => {
         commitlint: 'commitlint',
         commitmsg: 'commitlint -e $GIT_PARAMS',
         lint: 'eslint --cache src test',
-        'ci:lint:commits': 'commitlint --from=$CIRCLE_BRANCH --to=$CIRCLE_SHA1',
+        'ci:lint:commits':
+          'commitlint --from=${CIRCLE_BRANCH} --to=${CIRCLE_SHA1}',
         'lint-staged': 'lint-staged',
         prebuild: 'npm run clean',
         prepublish: 'npm run build',
