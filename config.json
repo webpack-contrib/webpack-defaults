@@ -6,7 +6,6 @@
         "editorconfig",
         "babel",
         "eslint",
-        "appveyor",
         "package",
         "codecov"
     ],
