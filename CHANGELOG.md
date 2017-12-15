@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0-alpha.0"></a>
+# [2.0.0-alpha.0](https://github.com/webpack-contrib/webpack-defaults/compare/v1.6.0...v2.0.0-alpha.0) (2017-12-15)
+
+
+*  refactor: Prettier & CircleCI initial conversion (#86) ([c64d846](https://github.com/webpack-contrib/webpack-defaults/commit/c64d846)), closes [#86](https://github.com/webpack-contrib/webpack-defaults/issues/86)
+
+
+### Bug Fixes
+
+* Add eslintrc to files array ([ac33c43](https://github.com/webpack-contrib/webpack-defaults/commit/ac33c43))
+* Remove appveyor template from config ([ca86566](https://github.com/webpack-contrib/webpack-defaults/commit/ca86566))
+
+
+### Features
+
+* **tasks:** add `codecov.yml` ([#77](https://github.com/webpack-contrib/webpack-defaults/issues/77)) ([66e266b](https://github.com/webpack-contrib/webpack-defaults/commit/66e266b))
+
+
+### BREAKING CHANGES
+
+* Drops support for NodeJS 4.x
+* Implements Prettier & modifies suported Eslint configuration that transfers applicable rule responsibility to Prettier
+* Drops TravisCI in favor of CircleCI 2.0
+* Drops support for Webpack 2.x
+* Enforces existing commit message format in pre-commit as it's required for release automation
+
+
+
 <a name="1.6.0"></a>
 # [1.6.0](https://github.com/webpack-contrib/webpack-defaults/compare/v1.5.1...v1.6.0) (2017-09-30)
 
