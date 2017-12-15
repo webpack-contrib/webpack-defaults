@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0-beta.1"></a>
+# [2.0.0-beta.1](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2017-12-15)
+
+
+### Bug Fixes
+
+* Type in package ([8966c78](https://github.com/webpack-contrib/webpack-defaults/commit/8966c78))
+
+
+### Features
+
+* Adds codeowners template ([#89](https://github.com/webpack-contrib/webpack-defaults/issues/89)) ([30a2e3b](https://github.com/webpack-contrib/webpack-defaults/commit/30a2e3b))
+
+
+
 <a name="2.0.0-beta.0"></a>
 # [2.0.0-beta.0](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-alpha.2...v2.0.0-beta.0) (2017-12-15)
 
