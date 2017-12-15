@@ -4,6 +4,7 @@ const { copyFiles } = require('mrm-core');
 // These files will be overwritten without any confirmation
 const files = [
   '.circleci/config.yml',
+  'commitlint.config.js',
   'LICENSE',
   '.github/ISSUE_TEMPLATE.md',
   '.github/PULL_REQUEST_TEMPLATE.md',
