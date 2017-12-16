@@ -13,21 +13,8 @@ module.exports = () => {
         round: 'down',
         range: '70...100',
         status: {
-          project: {
-            default: {
-              target: 'auto',
-            },
-          },
-          patch: {
-            default: {
-              target: 'auto',
-            },
-          },
-          changes: {
-            default: {
-              branches: null,
-            },
-          },
+          project: 'no',
+          patch: 'yes',
         },
       },
       comment: 'off',
