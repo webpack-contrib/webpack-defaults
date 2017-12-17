@@ -35,8 +35,13 @@ module.exports = () => {
   const templatesDir = path.resolve(__dirname, '../../templates');
 
   copyFiles(templatesDir, files);
-  if (!pathExists('test')) {
-    copyFiles(templatesDir, testFiles, { overwrite: false });
-  }
+
+  pathExists('test').then((exists) => {
+    if (!exists) {
+      copyFiles(templatesDir, testFiles, { overwrite: false });
+    }
+  });
+
+  copyFiles(templatesDir, testFiles, { overwrite: false });
   copyFiles(templatesDir, filesOnce, { overwrite: false });
 };

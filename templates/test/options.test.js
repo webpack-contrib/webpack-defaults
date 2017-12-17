@@ -6,7 +6,7 @@ describe('Options', () => {
       const config = {
         loader: {
           test: /\.js$/,
-          options: {boilerplate: true},
+          options: { boilerplate: true },
         },
       };
 

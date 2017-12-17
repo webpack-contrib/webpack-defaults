@@ -1,5 +1,5 @@
-import del from 'del';
 import path from 'path';
+import del from 'del';
 import webpack from 'webpack';
 import MemoryFS from 'memory-fs';
 
@@ -21,7 +21,13 @@ const modules = (config) => {
   };
 };
 
-const plugins = (config) => [].concat(config.plugins || []);
+const plugins = (config) =>
+  [
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['runtime'],
+      minChunks: Infinity,
+    }),
+  ].concat(config.plugins || []);
 
 const output = (config) => {
   return {
@@ -34,7 +40,7 @@ const output = (config) => {
   };
 };
 
-module.exports = function(fixture, config, options) {
+export default function(fixture, config, options) {
   config = {
     devtool: config.devtool || 'sourcemap',
     context: path.resolve(__dirname, '..', 'fixtures'),
@@ -59,4 +65,4 @@ module.exports = function(fixture, config, options) {
       resolve(stats);
     })
   );
-};
+}
