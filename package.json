@@ -37,11 +37,13 @@
   },
   "dependencies": {
     "chalk": "^2.3.0",
+    "git-username": "^0.5.0",
     "mrm-core": "^2.6.0",
-    "path-exists": "^3.0.0"
+    "path-exists": "^3.0.0",
+    "user-meta": "^1.0.0"
   },
   "devDependencies": {
-    "@webpack-contrib/eslint-config-webpack": "^2.0.1",
+    "@webpack-contrib/eslint-config-webpack": "^2.0.2",
     "babel-cli": "^6.26.0",
     "babel-jest": "^21.2.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
