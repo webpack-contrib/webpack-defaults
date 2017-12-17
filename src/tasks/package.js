@@ -84,7 +84,7 @@ module.exports = (config) => {
         'ci:lint': 'npm run lint && npm run security',
         'ci:test': 'npm run test -- --runInBand',
         'ci:coverage': 'npm run test:coverage -- --runInBand',
-        'webpack-defaults': 'webpack-defaults',
+        defaults: 'webpack-defaults',
       },
       dependencies: existingPackage.dependencies || {},
       devDependencies: existingPackage.devDependencies || {},
@@ -95,13 +95,8 @@ module.exports = (config) => {
         webpack: `^${config.maintWebpack} || ^${config.activeWebpack}`,
       },
       homepage: `https://github.com/${repository}`,
-      repository: {
-        type: 'git',
-        url: `https://github.com/${repository}`,
-      },
-      bugs: {
-        url: `https://github.com/${repository}`,
-      },
+      repository: `https://github.com/${repository}`,
+      bugs: `https://github.com/${repository}/issues`,
       'pre-commit': 'lint-staged',
       'lint-staged': {
         '*.js': ['eslint --fix', 'git add'],
