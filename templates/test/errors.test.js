@@ -5,7 +5,7 @@ describe('Errors', () => {
     const config = {
       loader: {
         test: /\.js$/,
-        options: { boilerplate: 'fail' },
+        options: { name: 'fail' },
       },
     };
 
