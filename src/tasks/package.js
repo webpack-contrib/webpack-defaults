@@ -49,15 +49,15 @@ module.exports = (config) => {
   const repository = `${github}/${packageName}`;
 
   const file = json('package.json');
-  const existingPackage = file.get();
+  const existing = file.get();
 
   json('package.json')
     .set({
       name: `${packageName}`,
-      version: existingPackage.version || '1.0.0',
-      author: existingPackage.author || `${name}`,
-      description: existingPackage.description || '',
-      license: existingPackage.license || 'MIT',
+      version: existing.version || '1.0.0',
+      author: existing.author || `${name}`,
+      description: existing.description || '',
+      license: existing.license || 'MIT',
       main: 'dist/cjs.js',
       files: ['dist'],
       scripts: {
@@ -86,8 +86,8 @@ module.exports = (config) => {
         'ci:coverage': 'npm run test:coverage -- --runInBand',
         defaults: 'webpack-defaults',
       },
-      dependencies: existingPackage.dependencies || {},
-      devDependencies: existingPackage.devDependencies || {},
+      dependencies: existing.dependencies || {},
+      devDependencies: existing.devDependencies || {},
       engines: {
         node: `>= ${config.maintLTS} || >= ${config.activeLTS}`,
       },
