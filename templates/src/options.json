@@ -1,7 +1,7 @@
 {
   "type": "object",
   "properties": {
-    "boilerplate": {
+    "name": {
       "type": "boolean"
     }
   },
