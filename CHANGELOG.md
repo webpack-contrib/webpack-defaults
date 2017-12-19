@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0-rc.0"></a>
+# [2.0.0-rc.0](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-beta.1...v2.0.0-rc.0) (2017-12-19)
+
+
+### Bug Fixes
+
+* Update demo options property ([36d7e09](https://github.com/webpack-contrib/webpack-defaults/commit/36d7e09))
+
+
+
 <a name="2.0.0-beta.1"></a>
 # [2.0.0-beta.1](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2017-12-15)
 
