@@ -11,24 +11,25 @@ module.exports = () => {
   );
 
   if (!readme.exists()) {
-    const startCase = (name) => name.replace(
-      name.charAt(0),
-      name.charAt(0).toUpperCase(),
-    );
+    const startCase = (name) =>
+      name.replace(name.charAt(0), name.charAt(0).toUpperCase());
 
-    readme.apply({
-      title: pkg.get('name')
-        .split('-')
-        .map((name) => startCase(name))
-        .join(' '),
-      name: pkg.get('name')
-        .replace(/(-loader|-webpack-plugin)$/, '')
-        .split('-')
-        .map((name) => startCase(name))
-        .join(''),
-      package: pkg.get('name'),
-      description: pkg.get('description') || '',
-    })
-    .save();
+    readme
+      .apply({
+        title: pkg
+          .get('name')
+          .split('-')
+          .map((name) => startCase(name))
+          .join(' '),
+        name: pkg
+          .get('name')
+          .replace(/(-loader|-webpack-plugin)$/, '')
+          .split('-')
+          .map((name) => startCase(name))
+          .join(''),
+        package: pkg.get('name'),
+        description: pkg.get('description') || '',
+      })
+      .save();
   }
 };
