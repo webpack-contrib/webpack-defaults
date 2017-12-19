@@ -1,7 +1,10 @@
 /* eslint-disable no-template-curly-in-string */
+const path = require('path');
+const meta = require('user-meta');
+const gitUsername = require('git-username');
 const { json, install } = require('mrm-core');
 
-const packages = ['schema-utils'];
+const packages = ['schema-utils', 'loader-utils'];
 
 const devPackages = [
   // Utilities
@@ -40,16 +43,23 @@ const devPackages = [
 ];
 
 module.exports = (config) => {
+  const { name } = meta;
+  const github = gitUsername();
+  const packageName = path.basename(process.cwd());
+  const repository = `${github}/${packageName}`;
+
+  const file = json('package.json');
+  const existing = file.get();
+
   json('package.json')
-    .merge({
+    .set({
+      name: `${packageName}`,
+      version: existing.version || '1.0.0',
+      author: existing.author || `${name}`,
+      description: existing.description || '',
+      license: existing.license || 'MIT',
       main: 'dist/cjs.js',
       files: ['dist'],
-      engines: {
-        node: `>= ${config.maintLTS} || >= ${config.activeLTS}`,
-      },
-      peerDependencies: {
-        webpack: '^3.0.0 || ^4.0.0',
-      },
       scripts: {
         start: 'npm run build -- -w',
         build:
@@ -74,7 +84,19 @@ module.exports = (config) => {
         'ci:lint': 'npm run lint && npm run security',
         'ci:test': 'npm run test -- --runInBand',
         'ci:coverage': 'npm run test:coverage -- --runInBand',
+        defaults: 'webpack-defaults',
       },
+      dependencies: existing.dependencies || {},
+      devDependencies: existing.devDependencies || {},
+      engines: {
+        node: `>= ${config.maintLTS} || >= ${config.activeLTS}`,
+      },
+      peerDependencies: {
+        webpack: `^${config.maintWebpack} || ^${config.activeWebpack}`,
+      },
+      homepage: `https://github.com/${repository}`,
+      repository: `https://github.com/${repository}`,
+      bugs: `https://github.com/${repository}/issues`,
       'pre-commit': 'lint-staged',
       'lint-staged': {
         '*.js': ['eslint --fix', 'git add'],
