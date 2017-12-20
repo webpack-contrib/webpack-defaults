@@ -36,12 +36,11 @@ module.exports = () => {
 
   copyFiles(templatesDir, files);
 
-  pathExists('test').then((exists) => {
+  pathExists('./test').then((exists) => {
     if (!exists) {
       copyFiles(templatesDir, testFiles, { overwrite: false });
     }
   });
 
-  copyFiles(templatesDir, testFiles, { overwrite: false });
   copyFiles(templatesDir, filesOnce, { overwrite: false });
 };
