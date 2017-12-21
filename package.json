@@ -33,7 +33,7 @@
     "travis:coverage": "npm run test:coverage -- --runInBand",
     "travis:lint": "npm run lint && npm run security",
     "travis:test": "npm run test -- --runInBand",
-    "webpack-defaults": "./bin/index.js"
+    "defaults": "./bin/index.js"
   },
   "dependencies": {
     "chalk": "^2.3.0",
