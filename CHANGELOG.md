@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0-rc.4"></a>
+# [2.0.0-rc.4](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-rc.3...v2.0.0-rc.4) (2017-12-22)
+
+
+### Bug Fixes
+
+* Post install set script incorrect ([214b4e5](https://github.com/webpack-contrib/webpack-defaults/commit/214b4e5))
+
+
+### Features
+
+* Adds vscode Jest debug configuration ([f05533b](https://github.com/webpack-contrib/webpack-defaults/commit/f05533b))
+
+
+
 <a name="2.0.0-rc.3"></a>
 # [2.0.0-rc.3](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-rc.2...v2.0.0-rc.3) (2017-12-21)
 
