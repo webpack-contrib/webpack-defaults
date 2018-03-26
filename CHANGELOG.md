@@ -2,6 +2,55 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/webpack-contrib/webpack-defaults/compare/v1.6.0...v2.0.0) (2018-03-26)
+
+
+### Code Refactoring
+
+* Webpack Defaults 2.x merge ([#88](https://github.com/webpack-contrib/webpack-defaults/issues/88)) ([979bdfd](https://github.com/webpack-contrib/webpack-defaults/commit/979bdfd))
+
+
+### Features
+
+* **tasks:** add `codecov.yml` ([#77](https://github.com/webpack-contrib/webpack-defaults/issues/77)) ([66e266b](https://github.com/webpack-contrib/webpack-defaults/commit/66e266b))
+
+
+### BREAKING CHANGES
+
+* Drops support for NodeJS 4.x
+
+refactor: Use non-deprecated config type
+
+ - Moves to non-deprecated eslint config  format
+
+refactor: Prettier integration
+
+ - Leverages Prettier to manage code style
+ - Migrates to eslint-config-webpack 2.x ( Prettier support)
+ - Updates code style per the above
+ - Adds `.prettierrc` to enforce development configs
+* Implements Prettier & modifies suported Eslint 
+configuration that transfers applicable rule responsibility to Prettier
+
+feat: Adds testing boilerplate
+ - Adds contrib standard testing config
+
+feat: Adds schema enforcement
+ - Installs schema utils dependency
+ - Creates `options.json` template
+ - Updates build script to accommodate `options.json`
+
+ci: Migrates to CircleCI 2.0 & custom build containers
+
+ - Migrates to CircleCI & a full continuous delivery workflow
+* Drops TravisCI in favor of CircleCI 2.0
+* Drops support for Webpack 2.x & adds 4.x support
+* Enforces existing commit message format 
+in pre-commit as it's required for release automation
+
+
+
 <a name="2.0.0-rc.4"></a>
 # [2.0.0-rc.4](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-rc.3...v2.0.0-rc.4) (2017-12-22)
 
