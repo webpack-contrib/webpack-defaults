@@ -21,7 +21,7 @@ npm install --save-dev webpack-defaults
 This will write a npm script you can run through
 
 ```bash
-npm run webpack-defaults
+npm run defaults
 ```
 
 Any time you want to sync your project with the defaults, update this dependency and run the command again.

@@ -6,12 +6,13 @@
         "editorconfig",
         "babel",
         "eslint",
-        "appveyor",
         "package",
         "codecov"
     ],
     "webpackVersion": "latest",
-    "minNode": "4.8",
-    "latestNodeLTS": "6",
-    "latestNode": "8"
+    "maintWebpack": "3.0.0",
+    "activeWebpack": "4.0.0",
+    "maintLTS": "6.9.0",
+    "activeLTS": "8.9.0",
+    "current": "9"
 }

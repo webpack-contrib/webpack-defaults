@@ -18,6 +18,5 @@ module.exports = () => {
     .set('root', true)
     .set('*', generalRules)
     .set('.md', mdRules)
-    .save()
-  ;
+    .save();
 };

@@ -2,6 +2,143 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0-rc.4"></a>
+# [2.0.0-rc.4](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-rc.3...v2.0.0-rc.4) (2017-12-22)
+
+
+### Bug Fixes
+
+* Post install set script incorrect ([214b4e5](https://github.com/webpack-contrib/webpack-defaults/commit/214b4e5))
+
+
+### Features
+
+* Adds vscode Jest debug configuration ([f05533b](https://github.com/webpack-contrib/webpack-defaults/commit/f05533b))
+
+
+
+<a name="2.0.0-rc.3"></a>
+# [2.0.0-rc.3](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-rc.2...v2.0.0-rc.3) (2017-12-21)
+
+
+### Bug Fixes
+
+* Set correct script on post-install ([79f71f2](https://github.com/webpack-contrib/webpack-defaults/commit/79f71f2))
+
+
+
+<a name="2.0.0-rc.2"></a>
+# [2.0.0-rc.2](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-rc.1...v2.0.0-rc.2) (2017-12-20)
+
+
+### Bug Fixes
+
+* **templates:** Generate cache from lock file ([e0bad7c](https://github.com/webpack-contrib/webpack-defaults/commit/e0bad7c))
+
+
+
+<a name="2.0.0-rc.1"></a>
+# [2.0.0-rc.1](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-rc.0...v2.0.0-rc.1) (2017-12-20)
+
+
+### Bug Fixes
+
+* **templates:** Fix test generation condition ([fcb49e2](https://github.com/webpack-contrib/webpack-defaults/commit/fcb49e2))
+
+
+
+<a name="2.0.0-rc.0"></a>
+# [2.0.0-rc.0](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-beta.1...v2.0.0-rc.0) (2017-12-19)
+
+
+### Bug Fixes
+
+* Update demo options property ([36d7e09](https://github.com/webpack-contrib/webpack-defaults/commit/36d7e09))
+
+
+
+<a name="2.0.0-beta.1"></a>
+# [2.0.0-beta.1](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2017-12-15)
+
+
+### Bug Fixes
+
+* Type in package ([8966c78](https://github.com/webpack-contrib/webpack-defaults/commit/8966c78))
+
+
+### Features
+
+* Adds codeowners template ([#89](https://github.com/webpack-contrib/webpack-defaults/issues/89)) ([30a2e3b](https://github.com/webpack-contrib/webpack-defaults/commit/30a2e3b))
+
+
+
+<a name="2.0.0-beta.0"></a>
+# [2.0.0-beta.0](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-alpha.2...v2.0.0-beta.0) (2017-12-15)
+
+
+### Bug Fixes
+
+* Do no initialize test example if directory exists ([f4bcc3e](https://github.com/webpack-contrib/webpack-defaults/commit/f4bcc3e))
+
+
+
+<a name="2.0.0-alpha.2"></a>
+# [2.0.0-alpha.2](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-alpha.1...v2.0.0-alpha.2) (2017-12-15)
+
+
+### Bug Fixes
+
+* Limit branch validation range ([ed5e000](https://github.com/webpack-contrib/webpack-defaults/commit/ed5e000))
+* Limit commit linting range ([2896b57](https://github.com/webpack-contrib/webpack-defaults/commit/2896b57))
+
+
+
+<a name="2.0.0-alpha.1"></a>
+# [2.0.0-alpha.1](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0-alpha.0...v2.0.0-alpha.1) (2017-12-15)
+
+
+### Bug Fixes
+
+* incorrect eslint config name ([8258ad5](https://github.com/webpack-contrib/webpack-defaults/commit/8258ad5))
+* Readme template badge file extension ([ead2b33](https://github.com/webpack-contrib/webpack-defaults/commit/ead2b33))
+* Run coverage in CircleCI ([05d122a](https://github.com/webpack-contrib/webpack-defaults/commit/05d122a))
+* Update readme template with CircleCI badge ([d1bb56e](https://github.com/webpack-contrib/webpack-defaults/commit/d1bb56e))
+
+
+### Features
+
+* Adds commit lint configuration ([14ac5ac](https://github.com/webpack-contrib/webpack-defaults/commit/14ac5ac))
+
+
+
+<a name="2.0.0-alpha.0"></a>
+# [2.0.0-alpha.0](https://github.com/webpack-contrib/webpack-defaults/compare/v1.6.0...v2.0.0-alpha.0) (2017-12-15)
+
+
+*  refactor: Prettier & CircleCI initial conversion (#86) ([c64d846](https://github.com/webpack-contrib/webpack-defaults/commit/c64d846)), closes [#86](https://github.com/webpack-contrib/webpack-defaults/issues/86)
+
+
+### Bug Fixes
+
+* Add eslintrc to files array ([ac33c43](https://github.com/webpack-contrib/webpack-defaults/commit/ac33c43))
+* Remove appveyor template from config ([ca86566](https://github.com/webpack-contrib/webpack-defaults/commit/ca86566))
+
+
+### Features
+
+* **tasks:** add `codecov.yml` ([#77](https://github.com/webpack-contrib/webpack-defaults/issues/77)) ([66e266b](https://github.com/webpack-contrib/webpack-defaults/commit/66e266b))
+
+
+### BREAKING CHANGES
+
+* Drops support for NodeJS 4.x
+* Implements Prettier & modifies suported Eslint configuration that transfers applicable rule responsibility to Prettier
+* Drops TravisCI in favor of CircleCI 2.0
+* Drops support for Webpack 2.x
+* Enforces existing commit message format in pre-commit as it's required for release automation
+
+
+
 <a name="1.6.0"></a>
 # [1.6.0](https://github.com/webpack-contrib/webpack-defaults/compare/v1.5.1...v1.6.0) (2017-09-30)
 
