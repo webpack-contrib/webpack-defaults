@@ -55,11 +55,16 @@ module.exports = (config) => {
     .set({
       name: `${packageName}`,
       version: existing.version || '1.0.0',
-      author: existing.author || `${name}`,
       description: existing.description || '',
       license: existing.license || 'MIT',
-      main: 'dist/cjs.js',
-      files: ['dist'],
+      repository: `${repository}`,
+      author: existing.author || `${name}`,
+      homepage: `https://github.com/${repository}`,
+      bugs: `https://github.com/${repository}/issues`,
+      main: existing.main || 'dist/cjs.js',
+      engines: {
+        node: `>= ${config.maintLTS}`,
+      },
       scripts: {
         start: 'npm run build -- -w',
         build:
@@ -86,17 +91,10 @@ module.exports = (config) => {
         'ci:coverage': 'npm run test:coverage -- --runInBand',
         defaults: 'webpack-defaults',
       },
+      files: existing.files || ['dist/', 'lib/', 'index.js'],
+      peerDependencies: existing.peerDependencies || { webpack: '^4.3.0' },
       dependencies: existing.dependencies || {},
       devDependencies: existing.devDependencies || {},
-      engines: {
-        node: `>= ${config.maintLTS} || >= ${config.activeLTS}`,
-      },
-      peerDependencies: {
-        webpack: `^${config.maintWebpack} || ^${config.activeWebpack}`,
-      },
-      homepage: `https://github.com/${repository}`,
-      repository: `https://github.com/${repository}`,
-      bugs: `https://github.com/${repository}/issues`,
       'pre-commit': 'lint-staged',
       'lint-staged': {
         '*.js': ['eslint --fix', 'git add'],
