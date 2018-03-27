@@ -2,19 +2,18 @@
   "name": "webpack-defaults",
   "version": "2.0.0",
   "description": "Defaults to be shared across webpack projects",
-  "main": "dist/cjs.js",
-  "files": [
-    "bin",
-    "dist",
-    "lib",
-    "src",
-    "templates",
-    "config.json"
-  ],
-  "engines": {
-    "node": ">= 6.9.0 || >= 8.9.0"
+  "license": "MIT",
+  "repository": "webpack-contrib/webpack-defaults",
+  "author": {
+    "name": "Artem Sapegin",
+    "url": "http://sapegin.me"
   },
+  "homepage": "https://github.com/webpack-contrib/webpack-defaults",
+  "main": "dist/cjs.js",
   "bin": "bin/index.js",
+  "engines": {
+    "node": ">= 6.9.0"
+  },
   "scripts": {
     "start": "npm run serve:dev src",
     "lint": "eslint --cache src test",
@@ -35,6 +34,17 @@
     "travis:test": "npm run test -- --runInBand",
     "defaults": "./bin/index.js"
   },
+  "files": [
+    "bin",
+    "dist",
+    "lib",
+    "src",
+    "templates",
+    "config.json"
+  ],
+  "keywords": [
+    "webpack"
+  ],
   "dependencies": {
     "chalk": "^2.3.0",
     "git-username": "^0.5.0",
@@ -61,21 +71,12 @@
     "prettier": "^1.9.2",
     "standard-version": "^4.2.0"
   },
+
   "pre-commit": "lint-staged",
   "lint-staged": {
     "*.js": [
       "eslint --fix",
       "git add"
     ]
-  },
-  "author": {
-    "name": "Artem Sapegin",
-    "url": "http://sapegin.me"
-  },
-  "keywords": [
-    "webpack"
-  ],
-  "homepage": "https://github.com/webpack-contrib/webpack-defaults",
-  "repository": "webpack-contrib/webpack-defaults",
-  "license": "MIT"
+  }
 }
