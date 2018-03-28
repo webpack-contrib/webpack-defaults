@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.1.1"></a>
+## [2.1.1](https://github.com/webpack-contrib/webpack-defaults/compare/v2.1.0...v2.1.1) (2018-03-28)
+
+
+### Bug Fixes
+
+* **commitlint:** fix type-enum options ([#99](https://github.com/webpack-contrib/webpack-defaults/issues/99)) ([c301bbc](https://github.com/webpack-contrib/webpack-defaults/commit/c301bbc)), closes [#94](https://github.com/webpack-contrib/webpack-defaults/issues/94) [#98](https://github.com/webpack-contrib/webpack-defaults/issues/98)
+
+
+
 <a name="2.1.0"></a>
 # [2.1.0](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0...v2.1.0) (2018-03-28)
 
