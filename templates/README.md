@@ -129,7 +129,7 @@ new `${name}`Plugin({
 [deps]: https://david-dm.org/webpack-contrib/${package}.svg
 [deps-url]: https://david-dm.org/webpack-contrib/${package}
 
-[tests]: https://circleci.com/gh/webpack-contrib/${package}.svg?style=svg
+[tests]: 	https://img.shields.io/circleci/project/github/webpack-contrib/${package}.svg
 [tests-url]: https://circleci.com/gh/webpack-contrib/${package}
 
 [cover]: https://codecov.io/gh/webpack-contrib/${package}/branch/master/graph/badge.svg
