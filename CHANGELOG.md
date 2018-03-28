@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/webpack-contrib/webpack-defaults/compare/v2.0.0...v2.1.0) (2018-03-28)
+
+
+### Features
+
+* **dotfile:** add .editorconfig to templates ([#96](https://github.com/webpack-contrib/webpack-defaults/issues/96)) ([8e43fd4](https://github.com/webpack-contrib/webpack-defaults/commit/8e43fd4))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/webpack-contrib/webpack-defaults/compare/v1.6.0...v2.0.0) (2018-03-26)
 

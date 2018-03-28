@@ -1,6 +1,6 @@
 {
   "name": "webpack-defaults",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Defaults to be shared across webpack projects",
   "license": "MIT",
   "repository": "webpack-contrib/webpack-defaults",
@@ -71,7 +71,6 @@
     "prettier": "^1.9.2",
     "standard-version": "^4.2.0"
   },
-
   "pre-commit": "lint-staged",
   "lint-staged": {
     "*.js": [
