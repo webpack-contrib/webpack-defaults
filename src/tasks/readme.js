@@ -7,7 +7,7 @@ module.exports = () => {
   // Create README.md (no update)
   const readme = template(
     'README.md',
-    path.join(__dirname, '../../templates/README.template')
+    path.join(__dirname, '../../templates/README.md')
   );
 
   if (!readme.exists()) {
