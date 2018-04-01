@@ -63,7 +63,7 @@ module.exports = (config) => {
       bugs: `https://github.com/${repository}/issues`,
       main: existing.main || 'dist/cjs.js',
       engines: {
-        node: `>= ${config.maintLTS}`,
+        node: `>= ${config.maintLTS} || >= ${config.activeLTS}`,
       },
       scripts: {
         start: 'npm run build -- -w',
