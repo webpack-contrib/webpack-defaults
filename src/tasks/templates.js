@@ -6,7 +6,6 @@ const { copyFiles } = require('mrm-core');
 const files = [
   '.circleci/config.yml',
   '.github/CODEOWNERS',
-  '.github/ISSUE_TEMPLATE.md',
   '.github/PULL_REQUEST_TEMPLATE.md',
   '.vscode/launch.json',
   '.editorconfig',

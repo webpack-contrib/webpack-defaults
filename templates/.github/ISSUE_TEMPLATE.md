@@ -13,7 +13,7 @@
 * Node Version:
 * NPM Version:
 * webpack Version:
-* webpack-serve Version:
+* ${package} Version:
 
 <!-- Please place an x (no spaces!) in all [ ] that apply -->
 
