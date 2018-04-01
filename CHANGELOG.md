@@ -6,6 +6,23 @@ All notable changes to this project will be documented in this file. See [standa
 ## [2.1.2](https://github.com/webpack-contrib/webpack-defaults/compare/v2.1.1...v2.1.2) (2018-04-01)
 
 
+### Code Refactoring
+
+* **Readme:** update readme with modern style and convention (#100) ([a300517](https://github.com/webpack-contrib/webpack-defaults/commit/a300517))
+
+- npmjs.org now left-aligns all content except images by default;
+  aligns section headers left
+- removes maintainers section: rarely kept up to date across the org
+- simplifies the Examples section, replaces lorem with [ placeholder ]
+- adds License section to point to LICENSE file for convenience
+- refactors the Options sections with simpler layout and easier to
+  read modern convention
+- adds package name header
+- moves badges below the webpack logo
+- uses github asset for webpack logo
+- adds Requirements section
+- replaces Usage with Getting Started and friendly text, direction
+- removed unnecessary multiple, copied Examples and Options
 
 <a name="2.1.1"></a>
 ## [2.1.1](https://github.com/webpack-contrib/webpack-defaults/compare/v2.1.0...v2.1.1) (2018-03-28)
@@ -55,7 +72,7 @@ refactor: Prettier integration
  - Migrates to eslint-config-webpack 2.x ( Prettier support)
  - Updates code style per the above
  - Adds `.prettierrc` to enforce development configs
-* Implements Prettier & modifies suported Eslint 
+* Implements Prettier & modifies suported Eslint
 configuration that transfers applicable rule responsibility to Prettier
 
 feat: Adds testing boilerplate
@@ -71,7 +88,7 @@ ci: Migrates to CircleCI 2.0 & custom build containers
  - Migrates to CircleCI & a full continuous delivery workflow
 * Drops TravisCI in favor of CircleCI 2.0
 * Drops support for Webpack 2.x & adds 4.x support
-* Enforces existing commit message format 
+* Enforces existing commit message format
 in pre-commit as it's required for release automation
 
 
