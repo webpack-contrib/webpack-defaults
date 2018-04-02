@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.2.0"></a>
+# [2.2.0](https://github.com/webpack-contrib/webpack-defaults/compare/v2.1.5...v2.2.0) (2018-04-02)
+
+
+### Features
+
+* **circle:** Add dist-tag version check to canary suite ([c64fae7](https://github.com/webpack-contrib/webpack-defaults/commit/c64fae7))
+
+
+
 <a name="2.1.5"></a>
 ## [2.1.5](https://github.com/webpack-contrib/webpack-defaults/compare/v2.1.4...v2.1.5) (2018-04-02)
 
