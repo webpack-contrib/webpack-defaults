@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.1.5"></a>
+## [2.1.5](https://github.com/webpack-contrib/webpack-defaults/compare/v2.1.4...v2.1.5) (2018-04-02)
+
+
+### Bug Fixes
+
+* **package:** copy existing bin property ([#108](https://github.com/webpack-contrib/webpack-defaults/issues/108)) ([de92db1](https://github.com/webpack-contrib/webpack-defaults/commit/de92db1))
+* **typo:** fix issue template path ([#107](https://github.com/webpack-contrib/webpack-defaults/issues/107)) ([43867c4](https://github.com/webpack-contrib/webpack-defaults/commit/43867c4))
+
+
+
 <a name="2.1.4"></a>
 ## [2.1.4](https://github.com/webpack-contrib/webpack-defaults/compare/v2.1.3...v2.1.4) (2018-04-01)
 
