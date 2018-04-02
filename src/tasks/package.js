@@ -1,5 +1,6 @@
 /* eslint-disable no-template-curly-in-string */
 const path = require('path');
+
 const meta = require('user-meta');
 const gitUsername = require('git-username');
 const { json, install } = require('mrm-core');
@@ -61,6 +62,7 @@ module.exports = (config) => {
       author: existing.author || `${name}`,
       homepage: `https://github.com/${repository}`,
       bugs: `https://github.com/${repository}/issues`,
+      bin: existing.bin || '',
       main: existing.main || 'dist/cjs.js',
       engines: {
         node: `>= ${config.maintLTS} || >= ${config.activeLTS}`,
