@@ -9,7 +9,7 @@
     "url": "http://sapegin.me"
   },
   "homepage": "https://github.com/webpack-contrib/webpack-defaults",
-  "main": "index.js",
+  "main": "lib/index.js",
   "bin": "bin/index.js",
   "engines": {
     "node": ">= 6.9.0"
@@ -35,8 +35,7 @@
     "lib/",
     "srcipt/",
     "templates/",
-    "config.json",
-    "index.js"
+    "config.json"
   ],
   "keywords": [
     "webpack"
