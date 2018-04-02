@@ -29,6 +29,6 @@ before_script:
       npm i --no-save webpack@^$WEBPACK_VERSION
     fi
 script:
-  - 'npm run travis:$JOB_PART'
+  - 'npm run ci:$JOB_PART'
 after_success:
   - 'bash <(curl -s https://codecov.io/bash)'

@@ -9,37 +9,32 @@
     "url": "http://sapegin.me"
   },
   "homepage": "https://github.com/webpack-contrib/webpack-defaults",
-  "main": "dist/cjs.js",
+  "main": "lib/index.js",
   "bin": "bin/index.js",
   "engines": {
     "node": ">= 6.9.0"
   },
   "scripts": {
-    "start": "npm run serve:dev src",
-    "lint": "eslint --cache src test",
-    "build": "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js'",
-    "clean:dist": "del-cli dist",
+    "start": "npm run serve:dev index.js",
+    "lint": "eslint --cache lib test index.js",
     "lint-staged": "lint-staged",
-    "prebuild": "npm run clean:dist",
-    "postinstall": "node lib/post_install.js",
-    "prepublish": "npm run build",
+    "postinstall": "node script/post_install.js",
     "release": "standard-version",
-    "serve:dev": "nodemon $2 --exec babel-node",
+    "serve:dev": "nodemon $2",
     "security": "nsp check",
     "test": "jest",
-    "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage",
+    "test:coverage": "jest --collectCoverageFrom='lib/**/*.js,index.js' --coverage",
     "test:watch": "jest --watch",
-    "travis:coverage": "npm run test:coverage -- --runInBand",
-    "travis:lint": "npm run lint && npm run security",
-    "travis:test": "npm run test -- --runInBand",
+    "ci:coverage": "npm run test:coverage -- --runInBand",
+    "ci:lint": "npm run lint && npm run security",
+    "ci:test": "npm run test -- --runInBand",
     "defaults": "./bin/index.js"
   },
   "files": [
-    "bin",
-    "dist",
-    "lib",
-    "src",
-    "templates",
+    "bin/",
+    "lib/",
+    "srcipt/",
+    "templates/",
     "config.json"
   ],
   "keywords": [
@@ -54,11 +49,6 @@
   },
   "devDependencies": {
     "@webpack-contrib/eslint-config-webpack": "^2.0.2",
-    "babel-cli": "^6.26.0",
-    "babel-jest": "^21.2.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
     "cross-env": "^5.1.1",
     "del-cli": "^1.1.0",
     "eslint": "^4.13.1",
@@ -76,6 +66,12 @@
     "*.js": [
       "eslint --fix",
       "git add"
+    ]
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/templates/"
     ]
   }
 }
