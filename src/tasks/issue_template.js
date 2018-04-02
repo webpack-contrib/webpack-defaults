@@ -1,4 +1,5 @@
 const path = require('path');
+
 const { json, template } = require('mrm-core');
 
 module.exports = () => {
@@ -7,7 +8,7 @@ module.exports = () => {
   // Create README.md (no update)
   const file = template(
     '.github/ISSUE_TEMPLATE.md',
-    path.join(__dirname, '../../templates/.gitub/ISSUE_TEMPLATE.md')
+    path.join(__dirname, '../../templates/.github/ISSUE_TEMPLATE.md')
   );
 
   if (!file.exists()) {
