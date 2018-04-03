@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.3.0"></a>
+# [2.3.0](https://github.com/webpack-contrib/webpack-defaults/compare/v2.2.1...v2.3.0) (2018-04-03)
+
+
+### Features
+
+* **templates:** add contributing guidelines ([#109](https://github.com/webpack-contrib/webpack-defaults/issues/109)) ([43a2114](https://github.com/webpack-contrib/webpack-defaults/commit/43a2114))
+
+
+
 <a name="2.2.1"></a>
 ## [2.2.1](https://github.com/webpack-contrib/webpack-defaults/compare/v2.2.0...v2.2.1) (2018-04-03)
 
