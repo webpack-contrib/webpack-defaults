@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.2.1"></a>
+## [2.2.1](https://github.com/webpack-contrib/webpack-defaults/compare/v2.2.0...v2.2.1) (2018-04-03)
+
+
+### Bug Fixes
+
+* **package:** Tighten engines version to disclude dev majors ([46021cb](https://github.com/webpack-contrib/webpack-defaults/commit/46021cb))
+
+
+
 <a name="2.2.0"></a>
 # [2.2.0](https://github.com/webpack-contrib/webpack-defaults/compare/v2.1.5...v2.2.0) (2018-04-02)
 
