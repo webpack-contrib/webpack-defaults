@@ -116,6 +116,12 @@ new `${name}`Plugin({
 // Bundle code here...
 ```
 
+## Contributing
+
+Please take a moment to read our contributing guidelines if you haven't yet done so.
+
+#### [CONTRIBUTING](./.github/CONTRIBUTING)
+
 ## License
 
 #### [MIT](./LICENSE)

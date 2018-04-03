@@ -15,7 +15,7 @@ const devPackages = [
   'memory-fs',
   'standard-version',
   '@commitlint/cli',
-  '@commitlint/config-angular',
+  '@commitlint/config-conventional',
   'conventional-github-releaser',
   'husky',
 

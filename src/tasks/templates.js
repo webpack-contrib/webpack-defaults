@@ -7,6 +7,7 @@ const files = [
   '.circleci/config.yml',
   '.github/CODEOWNERS',
   '.github/PULL_REQUEST_TEMPLATE.md',
+  '.github/CONTRIBUTING.md',
   '.vscode/launch.json',
   '.editorconfig',
   '.eslintrc.js',
