@@ -1,11 +1,10 @@
 /* eslint-disable no-template-curly-in-string */
 const path = require('path');
-
 const meta = require('user-meta');
 const gitUsername = require('git-username');
 const { json, install } = require('mrm-core');
 
-const packages = ['schema-utils', 'loader-utils'];
+const packages = ['@webpack-contrib/schema-utils', 'loader-utils'];
 
 const devPackages = [
   // Utilities
@@ -65,7 +64,7 @@ module.exports = (config) => {
       bin: existing.bin || '',
       main: existing.main || 'dist/cjs.js',
       engines: {
-        node: `>= ${config.maintLTS} || >= ${config.activeLTS}`,
+        node: `>= ${config.maintLTS} <7.0.0 || >= ${config.activeLTS}`,
       },
       scripts: {
         start: 'npm run build -- -w',
@@ -94,10 +93,10 @@ module.exports = (config) => {
         defaults: 'webpack-defaults',
       },
       files: existing.files || ['dist/', 'lib/', 'index.js'],
-      keywords: existing.keywords || ['webpack'],
       peerDependencies: existing.peerDependencies || { webpack: '^4.3.0' },
       dependencies: existing.dependencies || {},
       devDependencies: existing.devDependencies || {},
+      keywords: existing.keywords || ['webpack'],
       'pre-commit': 'lint-staged',
       'lint-staged': {
         '*.js': ['eslint --fix', 'git add'],
