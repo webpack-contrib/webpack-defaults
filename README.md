@@ -3,7 +3,6 @@
 [![test][test]][test-url]
 [![coverage][cover]][cover-url]
 [![chat][chat]][chat-url]
-[![size][size]][size-url]
 
 <div align="center">
   <a href="https://webpack.js.org/">
@@ -57,6 +56,3 @@ Any time you want to sync your project with the defaults, update this dependency
 
 [cover]: https://codecov.io/gh/webpack-contrib/webpack-defaults/branch/master/graph/badge.svg
 [cover-url]: https://codecov.io/gh/webpack-contrib/webpack-defaults
-
-[size]: https://packagephobia.now.sh/badge?p=webpack-defaults
-[size-url]: (https://packagephobia.now.sh/result?p=webpack-defaults
