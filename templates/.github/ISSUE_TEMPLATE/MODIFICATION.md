@@ -1,6 +1,6 @@
 ---
-name: ✨ Feature Request
-about: Suggest an idea for this project
+name: 🔧 Modification Request
+about: Would you like something work differently? Have an alternative approach? This is the template for you.
 
 ---
 
@@ -21,8 +21,13 @@ about: Suggest an idea for this project
 * webpack Version:
 * ${package} Version:
 
-### Feature Proposal
+
+### Expected Behavior / Situation
 
 
 
-### Feature Use Case
+### Actual Behavior / Situation
+
+
+
+### Modification Proposal

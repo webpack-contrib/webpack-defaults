@@ -1,6 +1,6 @@
 ---
-name: ✨ Feature Request
-about: Suggest an idea for this project
+name: 📚 Documentation
+about: Are the docs lacking or missing something? Do they need some new 🔥 hotness? Tell us here.
 
 ---
 
@@ -15,14 +15,16 @@ about: Suggest an idea for this project
   Head to StackOverflow or https://gitter.im/webpack/webpack.
 -->
 
-* Operating System:
-* Node Version:
-* NPM Version:
-* webpack Version:
-* ${package} Version:
+Documentation Is:
 
-### Feature Proposal
+<!-- Please place an x (no spaces!) in all [ ] that apply -->
+
+- [ ] Missing
+- [ ] Needed
+- [ ] Confusing
+- [ ] Not Sure?
+
+### Please Explain in Detail...
 
 
-
-### Feature Use Case
+### Your Proposal for Changes
