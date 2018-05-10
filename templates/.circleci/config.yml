@@ -62,9 +62,6 @@ jobs:
     docker:
       - image: webpackcontrib/circleci-node6:latest
     <<: *unit_tests
-  node9-latest:
-    docker:
-      - image: webpackcontrib/circleci-node9:latest
     <<: *unit_tests
   node10-latest:
     docker:
@@ -135,13 +132,6 @@ workflows:
           filters:
             tags:
               only: /.*/
-      - node9-latest:
-          requires:
-            - analysis
-            - node6-latest
-          filters:
-            tags:
-              only: /.*/
       - node10-latest:
           requires:
             - analysis
@@ -160,7 +150,6 @@ workflows:
           requires:
             - node8-latest
             - node8-canary
-            - node9-latest
             - node10-latest
           filters:
             branches:
