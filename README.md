@@ -1,58 +1,66 @@
-[![npm][npm]][npm-url]
-[![deps][deps]][deps-url]
-[![test][test]][test-url]
-[![coverage][cover]][cover-url]
-[![chat][chat]][chat-url]
-
 <div align="center">
-  <a href="https://webpack.js.org/">
-    <img width="200" height="200" vspace="" hspace="25" src="https://cdn.rawgit.com/webpack/media/e7485eb2/logo/icon-square-big.svg">
+  <a href="https://github.com/webpack/webpack">
+    <img width="200" height="200" src="https://webpack.js.org/assets/icon-square-big.svg">
   </a>
-  <h1>webpack-defaults</h1>
-  <p>Defaults to be shared across webpack projects</p>
 </div>
 
-<h2 align="center">Install</h2>
+[![npm][npm]][npm-url]
+[![node][node]][node-url]
+[![deps][deps]][deps-url]
+[![tests][tests]][tests-url]
+[![chat][chat]][chat-url]
+[![size][size]][size-url]
 
-```bash
-npm install --save-dev webpack-defaults
+# webpack-defaults
+
+Project configuration and boilerplate defaults for webpack projects
+
+## Requirements
+
+This module requires a minimum of Node v6.9.0 and Webpack v4.0.0.
+
+## Getting Started
+
+To begin, you'll need to install `webpack-defaults`:
+
+```console
+$ npm install @webpack-contrib/defaults --save-dev
 ```
 
-This will write a npm script you can run through
+After install a `defaults` NPM script will be written to the local
+`package.json`. To sync a project with webpack-defaults, simply run:
 
-```bash
+```
 npm run defaults
 ```
 
-Any time you want to sync your project with the defaults, update this dependency and run the command again.
+## Contributing
 
-<h2 align="center">Maintainers</h2>
+Please take a moment to read our contributing guidelines if you haven't yet done so.
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center">
-        <a href="https://github.com/sapegin">
-          <img width="150" height="150" src="https://avatars.githubusercontent.com/u/70067?v=3">
-          </br>
-          Artem Sapegin
-        </a>
-      </td>
-    </tr>
-  <tbody>
-</table>
+#### [CONTRIBUTING](./.github/CONTRIBUTING)
+
+## License
+
+#### [MIT](./LICENSE)
 
 [npm]: https://img.shields.io/npm/v/webpack-defaults.svg
 [npm-url]: https://npmjs.com/package/webpack-defaults
 
+[node]: https://img.shields.io/node/v/webpack-defaults.svg
+[node-url]: https://nodejs.org
+
 [deps]: https://david-dm.org/webpack-contrib/webpack-defaults.svg
 [deps-url]: https://david-dm.org/webpack-contrib/webpack-defaults
+
+[tests]: 	https://img.shields.io/circleci/project/github/webpack-contrib/webpack-defaults.svg
+[tests-url]: https://circleci.com/gh/webpack-contrib/webpack-defaults
+
+[cover]: https://codecov.io/gh/webpack-contrib/webpack-defaults/branch/master/graph/badge.svg
+[cover-url]: https://codecov.io/gh/webpack-contrib/webpack-defaults
 
 [chat]: https://img.shields.io/badge/gitter-webpack%2Fwebpack-brightgreen.svg
 [chat-url]: https://gitter.im/webpack/webpack
 
-[test]: http://img.shields.io/travis/webpack-contrib/webpack-defaults.svg
-[test-url]: https://travis-ci.org/webpack-contrib/webpack-defaults
-
-[cover]: https://codecov.io/gh/webpack-contrib/webpack-defaults/branch/master/graph/badge.svg
-[cover-url]: https://codecov.io/gh/webpack-contrib/webpack-defaults
+[size]: https://packagephobia.now.sh/badge?p=webpack-defaults
+[size-url]: https://packagephobia.now.sh/result?p=webpack-defaults

@@ -1,7 +1,10 @@
 {
-  "name": "webpack-defaults",
+  "name": "@webpack-contrib/defaults",
   "version": "2.4.0",
-  "description": "Defaults to be shared across webpack projects",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Project configuration and boilerplate defaults for webpack projects",
   "license": "MIT",
   "repository": "webpack-contrib/webpack-defaults",
   "author": {
