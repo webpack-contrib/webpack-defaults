@@ -1,6 +1,6 @@
 {
   "name": "webpack-defaults",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Defaults to be shared across webpack projects",
   "license": "MIT",
   "repository": "webpack-contrib/webpack-defaults",
