@@ -90,7 +90,7 @@ module.exports = (config) => {
         'ci:lint': 'npm run lint && npm run security',
         'ci:test': 'npm run test -- --runInBand',
         'ci:coverage': 'npm run test:coverage -- --runInBand',
-        defaults: 'webpack-defaults',
+        defaults: 'defaults',
       },
       files: existing.files || ['dist/', 'lib/', 'index.js'],
       peerDependencies: existing.peerDependencies || { webpack: '^4.3.0' },
