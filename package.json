@@ -1,6 +1,6 @@
 {
   "name": "@webpack-contrib/defaults",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "publishConfig": {
     "access": "public"
   },
@@ -13,7 +13,9 @@
   },
   "homepage": "https://github.com/webpack-contrib/webpack-defaults",
   "main": "dist/cjs.js",
-  "bin": "bin/index.js",
+  "bin": {
+    "webpack-defaults": "bin/index.js"
+  },
   "engines": {
     "node": ">= 6.9.0"
   },

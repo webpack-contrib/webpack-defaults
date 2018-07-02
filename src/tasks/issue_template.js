@@ -1,17 +1,32 @@
 const path = require('path');
 
-const { json, template } = require('mrm-core');
+const { copyFiles, json, template } = require('mrm-core');
 
 module.exports = () => {
   const pkg = json('package.json');
 
-  // Create README.md (no update)
-  const file = template(
-    '.github/ISSUE_TEMPLATE.md',
-    path.join(__dirname, '../../templates/.github/ISSUE_TEMPLATE.md')
-  );
+  const staticTemplates = [
+    '.github/ISSUE_TEMPLATE/DOCS.md',
+    '.github/ISSUE_TEMPLATE/SUPPORT.md',
+  ];
 
-  if (!file.exists()) {
+  const dynamicTemplates = [
+    'ISSUE_TEMPLATE.md',
+    'ISSUE_TEMPLATE/BUG.md',
+    'ISSUE_TEMPLATE/FEATURE.md',
+    'ISSUE_TEMPLATE/MODIFICATION.md',
+  ];
+
+  const sourceDir = path.join(__dirname, '../../templates');
+
+  copyFiles(sourceDir, staticTemplates);
+
+  for (const tmpl of dynamicTemplates) {
+    const file = template(
+      `.github/${tmpl}`,
+      path.join(__dirname, `../../templates/.github/${tmpl}`)
+    );
+
     file.apply({ package: pkg.get('name') }).save();
   }
 };

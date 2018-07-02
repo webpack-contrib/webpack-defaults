@@ -1,5 +1,6 @@
 /* eslint-disable no-template-curly-in-string */
 const path = require('path');
+
 const meta = require('user-meta');
 const gitUsername = require('git-username');
 const { json, install } = require('mrm-core');
@@ -90,7 +91,7 @@ module.exports = (config) => {
         'ci:lint': 'npm run lint && npm run security',
         'ci:test': 'npm run test -- --runInBand',
         'ci:coverage': 'npm run test:coverage -- --runInBand',
-        defaults: 'defaults',
+        defaults: 'webpack-defaults',
       },
       files: existing.files || ['dist/', 'lib/', 'index.js'],
       peerDependencies: existing.peerDependencies || { webpack: '^4.3.0' },

@@ -3,6 +3,7 @@
 /* eslint-disable no-console, global-require, import/no-dynamic-require */
 
 const chalk = require('chalk');
+
 const config = require('../config.json');
 
 module.exports = function webpackDefaults() {
