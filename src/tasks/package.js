@@ -1,5 +1,6 @@
 /* eslint-disable no-template-curly-in-string */
 const path = require('path');
+
 const meta = require('user-meta');
 const gitUsername = require('git-username');
 const { json, install } = require('mrm-core');
