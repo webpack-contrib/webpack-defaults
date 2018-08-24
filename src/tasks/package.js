@@ -5,7 +5,7 @@ const meta = require('user-meta');
 const gitUsername = require('git-username');
 const { json, install } = require('mrm-core');
 
-const packages = ['@webpack-contrib/schema-utils', 'loader-utils'];
+const packages = ['schema-utils', 'loader-utils'];
 
 const devPackages = [
   // Utilities
