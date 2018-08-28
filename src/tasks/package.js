@@ -74,7 +74,7 @@ module.exports = (config) => {
         clean: 'del-cli dist',
         commitlint: 'commitlint',
         commitmsg: 'commitlint -e $GIT_PARAMS',
-        lint: 'eslint --cache src test',
+        lint: 'eslint --cache src test --ignore-pattern fixtures',
         'ci:lint:commits':
           'commitlint --from=${CIRCLE_BRANCH} --to=${CIRCLE_SHA1}',
         'lint-staged': 'lint-staged',
@@ -101,7 +101,12 @@ module.exports = (config) => {
       jest: { testEnvironment: 'node' },
       'pre-commit': 'lint-staged',
       'lint-staged': {
-        '*.js': ['eslint --fix', 'git add'],
+        'linters': {
+          '*.js': ['eslint --fix', 'git add'],
+        }
+        'ignore': [
+          '**/fixtures/**'
+        ]
       },
     })
     .save();
