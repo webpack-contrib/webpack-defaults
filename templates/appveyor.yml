@@ -6,13 +6,16 @@ init:
   - git config --global core.autocrlf input
 environment:
   matrix:
+    - nodejs_version: '10'
+      webpack_version: latest
+      job_part: test
     - nodejs_version: '8'
       webpack_version: latest
       job_part: test
     - nodejs_version: '6'
       webpack_version: latest
       job_part: test
-    - nodejs_version: '8'
+    - nodejs_version: '10'
       webpack_version: next
       job_part: test
 build: 'off'
@@ -27,4 +30,5 @@ before_test:
 test_script:
   - node --version
   - npm --version
-  - cmd: npm run ci:%job_part%
+  - cmd: FOR /F %%I in ('compver --name webpack --gte %webpack_version% --lt latest') do SET COMPARED_VERSION_RESULT=%%I
+  - cmd: IF %COMPARED_VERSION_RESULT% NEQ -1 (npm run ci:%job_part%) ELSE (ECHO "Next is older than Latest - Skipping Canary Suite")

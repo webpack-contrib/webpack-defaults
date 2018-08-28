@@ -66,9 +66,9 @@ jobs:
     docker:
       - image: webpackcontrib/circleci-node10:latest
     <<: *unit_tests
-  node8-canary:
+  node10-canary:
     docker:
-      - image: webpackcontrib/circleci-node8:latest
+      - image: webpackcontrib/circleci-node10:latest
     <<: *canary_tests
   analysis:
     docker:
@@ -106,7 +106,6 @@ jobs:
           name: Publish to NPM
           command: printf "noop running conventional-github-releaser"
 
-version: 2.0
 workflows:
   version: 2
   validate-publish:
@@ -138,7 +137,7 @@ workflows:
           filters:
             tags:
               only: /.*/
-      - node8-canary:
+      - node10-canary:
           requires:
             - analysis
             - node6-latest
@@ -148,8 +147,8 @@ workflows:
       - publish:
           requires:
             - node8-latest
-            - node8-canary
             - node10-latest
+            - node10-canary
           filters:
             branches:
               only:
