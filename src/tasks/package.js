@@ -101,7 +101,12 @@ module.exports = (config) => {
       jest: { testEnvironment: 'node' },
       'pre-commit': 'lint-staged',
       'lint-staged': {
-        '*.js': ['eslint --fix', 'git add'],
+        'linters': {
+          '*.js': ['eslint --fix', 'git add'],
+        }
+        'ignore': [
+          '**/fixtures/**'
+        ]
       },
     })
     .save();
