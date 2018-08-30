@@ -25,6 +25,7 @@ install:
   - ps: Install-Product node $env:nodejs_version x64
   - npm i -g npm@latest
   - npm install
+  - npm i -g @webpack-contrib/tag-versions
 before_test:
   - cmd: npm install webpack@%webpack_version%
 test_script:
