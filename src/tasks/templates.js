@@ -20,16 +20,15 @@ const files = [
 
 const testFiles = [
   'test/loader.test.js',
+  'test/errors.test.js',
   'test/options.test.js',
-  'test/fixtures/fixture.js',
-  'test/fixtures/foo.js',
   'test/helpers/compiler.js',
+  'test/fixtures/fixture.js',
 ];
 
 // These files will by created only once
 const filesOnce = [
   'src/index.js',
-  'src/cjs.js',
   'src/options.json',
   'CHANGELOG.md',
 ];

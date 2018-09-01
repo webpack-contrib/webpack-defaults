@@ -19,17 +19,9 @@ const devPackages = [
   '@commitlint/config-conventional',
   'conventional-github-releaser',
   'husky',
-
   // Jest
   'jest',
   'babel-jest',
-
-  // Babel
-  'babel-cli',
-  'babel-polyfill',
-  'babel-preset-env',
-  'babel-plugin-transform-object-rest-spread',
-
   // ESLint
   'eslint',
   'eslint-plugin-import',
@@ -38,7 +30,6 @@ const devPackages = [
   'lint-staged',
   'pre-commit',
   'prettier',
-
   // Webpack
   'webpack',
 ];
@@ -63,7 +54,7 @@ module.exports = (config) => {
       homepage: `https://github.com/${repository}`,
       bugs: `https://github.com/${repository}/issues`,
       bin: existing.bin || '',
-      main: existing.main || 'dist/cjs.js',
+      main: existing.main || 'src/index.js',
       engines: {
         node: `>= ${config.maintLTS} <7.0.0 || >= ${config.activeLTS}`,
       },

@@ -1,7 +1,7 @@
-import path from 'path';
-import del from 'del';
-import webpack from 'webpack';
-import MemoryFS from 'memory-fs';
+const path = require('path');
+const del = require('del');
+const webpack = require('webpack');
+const MemoryFS = require('memory-fs');
 
 const modules = (config) => {
   return {
@@ -40,7 +40,7 @@ const output = (config) => {
   };
 };
 
-export default function(fixture, config, options) {
+module.exports = function(fixture, config, options) {
   config = {
     devtool: config.devtool || 'sourcemap',
     context: path.resolve(__dirname, '..', 'fixtures'),
@@ -52,11 +52,15 @@ export default function(fixture, config, options) {
 
   options = Object.assign({ output: false }, options);
 
-  if (options.output) del.sync(config.output.path);
+  if (options.output) {
+    del.sync(config.output.path);
+  }
 
   const compiler = webpack(config);
 
-  if (!options.output) compiler.outputFileSystem = new MemoryFS();
+  if (!options.output) {
+    compiler.outputFileSystem = new MemoryFS();
+  }
 
   return new Promise((resolve, reject) =>
     compiler.run((err, stats) => {
