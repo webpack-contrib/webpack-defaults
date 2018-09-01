@@ -124,7 +124,7 @@ new `${name}`Plugin({
 
 Please take a moment to read our contributing guidelines if you haven't yet done so.
 
-[CONTRIBUTING](./.github/CONTRIBUTING)
+[CONTRIBUTING](./.github/CONTRIBUTING.md)
 
 ## License
 
