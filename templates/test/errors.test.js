@@ -1,17 +1,20 @@
-import webpack from './helpers/compiler';
+const webpack = require('./helpers/compiler');
 
 describe('Errors', () => {
-  test('Validation Error', async () => {
+  test('Validation Error', () => {
     const config = {
       loader: {
         test: /\.js$/,
-        options: { name: 'fail' },
+        options: {
+          option: 'false'
+        },
       },
     };
 
-    const stats = await webpack('fixture.js', config);
-    const { errors } = stats.toJson();
+    return webpack('fixture.js', config).then((stats) => {
+      const { errors } = stats.toJson();
 
-    expect(errors).toMatchSnapshot();
+      expect(errors).toMatchSnapshot();
+    });
   });
 });

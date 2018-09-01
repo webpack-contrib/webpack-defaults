@@ -1,6 +1,5 @@
 {
   "tasks": [
-    "babel",
     "codecov",
     "eslint",
     "git",

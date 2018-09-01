@@ -1,3 +1,3 @@
-import foo from './foo';
+const foo = 42;
 
 export default foo;

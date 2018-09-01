@@ -1,26 +1,16 @@
-import { getOptions } from 'loader-utils';
-import validateOptions from 'schema-utils';
+const { getOptions } = require('loader-utils');
+const validateOptions = require('schema-utils');
 
-import schema from './options.json';
+const schema = require('./options.json');
 
-export const raw = true;
+function loader(source) {
+  const options = Object.assign({}, getOptions(this));
 
-export default function loader(source) {
-  const { version, webpack } = this;
+  validateOptions(schema, options, 'Loader Name');
 
-  const options = getOptions(this) || {};
+  const result = `export default ${source}`;
 
-  validateOptions(schema, options, 'Loader');
-
-  const newSource = `
-  /**
-   * Loader API Version: ${version}
-   * Is this in "webpack mode": ${webpack}
-   */
-  /**
-   * Original Source From Loader
-   */
-  ${source}`;
-
-  return `${newSource}`;
+  return result;
 }
+
+module.exports = loader
