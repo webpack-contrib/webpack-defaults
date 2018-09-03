@@ -1,7 +1,6 @@
 {
   "tasks": [
     "babel",
-    "codecov",
     "eslint",
     "git",
     "issue_template",
