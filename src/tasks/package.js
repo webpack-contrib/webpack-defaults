@@ -9,7 +9,6 @@ const packages = ['schema-utils', 'loader-utils'];
 
 const devPackages = [
   // Utilities
-  'nsp',
   'del',
   'del-cli',
   'cross-env',
@@ -84,7 +83,7 @@ module.exports = (config) => {
         'release:ci': 'conventional-github-releaser -p angular',
         'release:validate':
           'commitlint --from=$(git describe --tags --abbrev=0) --to=$(git rev-parse HEAD)',
-        security: 'nsp check',
+        security: 'npm audit',
         test: 'jest',
         'test:watch': 'jest --watch',
         'test:coverage': "jest --collectCoverageFrom='src/**/*.js' --coverage",
