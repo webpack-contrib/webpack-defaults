@@ -44,10 +44,10 @@ Please take a moment to read our contributing guidelines if you haven't yet done
 
 #### [MIT](./LICENSE)
 
-[npm]: https://img.shields.io/npm/v/webpack-defaults.svg
-[npm-url]: https://npmjs.com/package/webpack-defaults
+[npm]: https://img.shields.io/npm/v/@webpack-contrib/defaults.svg
+[npm-url]: https://npmjs.com/package/@webpack-contrib/defaults
 
-[node]: https://img.shields.io/node/v/webpack-defaults.svg
+[node]: https://img.shields.io/node/v/@webpack-contrib/defaults.svg
 [node-url]: https://nodejs.org
 
 [deps]: https://david-dm.org/webpack-contrib/webpack-defaults.svg
@@ -62,5 +62,5 @@ Please take a moment to read our contributing guidelines if you haven't yet done
 [chat]: https://img.shields.io/badge/gitter-webpack%2Fwebpack-brightgreen.svg
 [chat-url]: https://gitter.im/webpack/webpack
 
-[size]: https://packagephobia.now.sh/badge?p=webpack-defaults
-[size-url]: https://packagephobia.now.sh/result?p=webpack-defaults
+[size]: https://packagephobia.now.sh/badge?p=@webpack-contrib/defaults
+[size-url]: https://packagephobia.now.sh/result?p=@webpack-contrib/defaults

@@ -41,6 +41,7 @@ import file from 'file.ext';
 
 <!-- isLoader ? use(this) : delete(isPlugin) -->
 **webpack.config.js**
+
 ```js
 module.exports = {
   module: {
@@ -61,6 +62,7 @@ module.exports = {
 
 <!-- isPlugin ? use(this) : delete(isLoader) -->
 **webpack.config.js**
+
 ```js
 module.exports = {
   plugins: [
@@ -72,8 +74,6 @@ module.exports = {
 And run `webpack` via your preferred method.
 
 ## Options
-
-
 
 ### `[option]`
 

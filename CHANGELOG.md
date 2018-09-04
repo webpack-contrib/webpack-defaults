@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.6.0"></a>
+## [2.6.0](https://github.com/webpack-contrib/webpack-defaults/compare/v2.5.0...v2.6.0) (2018-09-05)
+
+
+### Bug Fixes
+
+* use `schema-utils` instead `@webpack-contrib/schema-utils` to validate options ([#128](https://github.com/webpack-contrib/webpack-defaults/issues/128)) ([63644e1](https://github.com/webpack-contrib/webpack-defaults/commit/63644e1))
+* skip canary tests on `appveyor` when it is not required ([f97c678](https://github.com/webpack-contrib/webpack-defaults/commit/f97c678))
+* correct link in README on `CONTRIBUTING.md` and `LICENSE` ([3307b05](https://github.com/webpack-contrib/webpack-defaults/commit/3307b05))
+
+### Features
+
+* add issues templates (bug, docs, feature, modification, support) ([9a97478](https://github.com/webpack-contrib/webpack-defaults/commit/9a97478))
+* add npm size badge to README ([a094e1f](https://github.com/webpack-contrib/webpack-defaults/commit/a094e1f))
+* add and use `node@10` for `appveyor` and `CircleCI` ([f97c678](https://github.com/webpack-contrib/webpack-defaults/commit/f97c678))
+* use `npm audit` instead `nsp` ([42e14e3](https://github.com/webpack-contrib/webpack-defaults/commit/42e14e3))
+* use `npm ci` where it is possible ([42e14e3](https://github.com/webpack-contrib/webpack-defaults/commit/42e14e3))
+* enable `cache` for `appveyor`
+
+### Internal
+
+* remove `codecov` config file, default configuration is enough ([9f4f9fc]((https://github.com/webpack-contrib/webpack-defaults/commit/9f4f9fc))
+* simplify CircleCI config ([42e14e3](https://github.com/webpack-contrib/webpack-defaults/commit/42e14e3))
+
+
+
 <a name="2.3.0"></a>
 # [2.3.0](https://github.com/webpack-contrib/webpack-defaults/compare/v2.2.1...v2.3.0) (2018-04-03)
 
