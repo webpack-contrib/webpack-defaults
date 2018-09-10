@@ -80,9 +80,6 @@ module.exports = (config) => {
         prebuild: 'npm run clean',
         prepublish: 'npm run build',
         release: 'standard-version',
-        'release:ci': 'conventional-github-releaser -p angular',
-        'release:validate':
-          'commitlint --from=$(git describe --tags --abbrev=0) --to=$(git rev-parse HEAD)',
         security: 'npm audit',
         test: 'jest',
         'test:watch': 'jest --watch',
