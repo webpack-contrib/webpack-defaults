@@ -111,9 +111,13 @@ module.exports = (config) => {
         ],
       },
       jest: { testEnvironment: 'node' },
-      'pre-commit': 'lint-staged',
       'lint-staged': {
         '*.js': ['eslint --fix', 'git add'],
+      },
+      husky: {
+        hooks: {
+          'pre-commit': 'lint-staged',
+        },
       },
       commitlint: {
         extends: ['@commitlint/config-conventional'],
