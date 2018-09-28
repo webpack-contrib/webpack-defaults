@@ -18,6 +18,7 @@ const gitignore = [
   '.DS_Store',
   'Thumbs.db',
   '.idea',
+  '*.iml',
   '.vscode',
   '*.sublime-project',
   '*.sublime-workspace',
