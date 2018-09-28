@@ -102,6 +102,9 @@ module.exports = (config) => {
       'lint-staged': {
         '*.js': ['eslint --fix', 'git add'],
       },
+      commitlint: {
+        extends: ['@commitlint/config-conventional'],
+      },
     })
     .save();
   install(packages, { dev: false });
