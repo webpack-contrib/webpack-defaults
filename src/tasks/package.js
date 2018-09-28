@@ -33,13 +33,16 @@ const devPackages = [
   'eslint',
   'eslint-plugin-import',
   'eslint-plugin-prettier',
-  '@webpack-contrib/eslint-config-webpack',
   'lint-staged',
   'pre-commit',
   'prettier',
 
   // Webpack
   'webpack',
+
+  // Webpack Contrib
+  '@webpack-contrib/defaults',
+  '@webpack-contrib/eslint-config-webpack',
 ];
 
 module.exports = (config) => {
