@@ -1,6 +1,5 @@
 {
   "tasks": [
-    "babel",
     "eslint",
     "git",
     "issue_template",
