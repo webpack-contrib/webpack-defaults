@@ -95,9 +95,13 @@ module.exports = (config) => {
       devDependencies: existing.devDependencies || {},
       keywords: existing.keywords || ['webpack'],
       jest: { testEnvironment: 'node' },
-      'pre-commit': 'lint-staged',
       'lint-staged': {
         '*.js': ['eslint --fix', 'git add'],
+      },
+      husky: {
+        hooks: {
+          'pre-commit': 'lint-staged',
+        },
       },
     })
     .save();
