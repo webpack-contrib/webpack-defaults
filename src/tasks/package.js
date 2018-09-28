@@ -24,10 +24,10 @@ const devPackages = [
   'babel-jest',
 
   // Babel
-  'babel-cli',
-  'babel-polyfill',
-  'babel-preset-env',
-  'babel-plugin-transform-object-rest-spread',
+  '@babel/cli',
+  '@babel/polyfill',
+  '@babel/core',
+  '@babel/preset-env',
 
   // ESLint
   'eslint',
@@ -94,6 +94,19 @@ module.exports = (config) => {
       dependencies: existing.dependencies || {},
       devDependencies: existing.devDependencies || {},
       keywords: existing.keywords || ['webpack'],
+      babel: {
+        presets: [
+          [
+            '@babel/preset-env',
+            {
+              targets: {
+                node: config.maintLTS,
+              },
+              useBuiltIns: 'usage',
+            },
+          ],
+        ],
+      },
       jest: { testEnvironment: 'node' },
       'pre-commit': 'lint-staged',
       'lint-staged': {
@@ -103,4 +116,6 @@ module.exports = (config) => {
     .save();
   install(packages, { dev: false });
   install(devPackages);
+  // Require for `jest`
+  install({ 'babel-core': '^7.0.0-bridge.0' });
 };
