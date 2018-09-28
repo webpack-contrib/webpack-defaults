@@ -30,7 +30,7 @@
     "prepublish": "npm run build",
     "release": "standard-version",
     "serve:dev": "nodemon $2 --exec babel-node",
-    "security": "nsp check",
+    "security": "nsp audit",
     "test": "jest",
     "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage",
     "test:watch": "jest --watch",
@@ -71,7 +71,6 @@
     "eslint-plugin-prettier": "^2.3.1",
     "jest": "^23.0.1",
     "lint-staged": "^7.1.0",
-    "nsp": "^3.1.0",
     "pre-commit": "^1.2.2",
     "prettier": "^1.9.2",
     "standard-version": "^4.2.0"
