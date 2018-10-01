@@ -30,7 +30,7 @@
     "prepublish": "npm run build",
     "release": "standard-version",
     "serve:dev": "nodemon $2 --exec babel-node",
-    "security": "nsp audit",
+    "security": "npm audit",
     "test": "jest",
     "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage",
     "test:watch": "jest --watch",
