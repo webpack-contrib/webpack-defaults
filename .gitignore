@@ -12,3 +12,5 @@ Thumbs.db
 .idea
 *.sublime-project
 *.sublime-workspace
+*.iml
+.vscode

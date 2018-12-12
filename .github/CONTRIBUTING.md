@@ -1,6 +1,6 @@
 ## Contributing in @webpack-contrib
 
-We'd always love contributions to further improve the webpack / webpack-contrib ecosystem!
+We'd always love contributions to further improve the webpack / webpack-contrib ecosystem! 
 Here are the guidelines we'd like you to follow:
 
 * [Questions and Problems](#question)
@@ -11,8 +11,8 @@ Here are the guidelines we'd like you to follow:
 
 ### <a name="question"></a> Got a Question or Problem?
 
-Please submit support requests and questions to StackOverflow using the tag [[webpack]](http://stackoverflow.com/tags/webpack).
-StackOverflow is better suited for this kind of support though you may also inquire in [Webpack Gitter](https://gitter.im/webpack/webpack).
+Please submit support requests and questions to StackOverflow using the tag [[webpack]](http://stackoverflow.com/tags/webpack). 
+StackOverflow is better suited for this kind of support though you may also inquire in [Webpack Gitter](https://gitter.im/webpack/webpack). 
 The issue tracker is for bug reports and feature discussions.
 
 ### <a name="issue"></a> Found an Issue or Bug?
@@ -33,7 +33,7 @@ Unfortunately, we are not able to investigate / fix bugs without a minimal repro
 
 ### <a name="feature"></a> Feature Requests?
 
-You can *request* a new feature by creating an issue on Github.
+You can *request* a new feature by creating an issue on Github. 
 
 If you would like to *implement* a new feature, please submit an issue with a proposal for your work `first`, to be sure that particular makes sense for the project.
 
@@ -66,7 +66,7 @@ to read on GitHub as well as in various git tools.
 
 The footer should contain a [closing reference to an issue](https://help.github.com/articles/closing-issues-via-commit-messages/) if any.
 
-Examples:
+Examples: 
 ```
 docs(readme): update install instructions
 ```
@@ -75,7 +75,7 @@ fix: refer to the `entrypoint` instead of the first `module`
 ```
 
 #### Revert
-If the commit reverts a previous commit, it should begin with `revert: `, followed by the header of the reverted commit.
+If the commit reverts a previous commit, it should begin with `revert: `, followed by the header of the reverted commit. 
 In the body it should say: `This reverts commit <hash>.`, where the hash is the SHA of the commit being reverted.
 
 #### Type
@@ -116,7 +116,7 @@ reference GitHub issues that this commit **Closes**.
 Example
 
 ```
-BREAKING CHANGE: Updates to `Chunk.mapModules`.
+BREAKING CHANGE: Updates to `Chunk.mapModules`. 
 
 This release is not backwards compatible with `Webpack 2.x` due to breaking changes in webpack/webpack#4764
 Migration: see webpack/webpack#5225
