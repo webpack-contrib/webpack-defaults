@@ -6,7 +6,7 @@
   "repository": "webpack-contrib/webpack-defaults",
   "author": {
     "name": "Artem Sapegin",
-    "url": "http://sapegin.me"
+    "url": "https://sapegin.me"
   },
   "homepage": "https://github.com/webpack-contrib/webpack-defaults",
   "bugs": "https://github.com/webpack-contrib/webpack-defaults/issues",
@@ -35,7 +35,7 @@
     "ci:test": "npm run test -- --runInBand",
     "ci:coverage": "npm run test:coverage -- --runInBand",
     "ci:lint:commits": "commitlint --from=origin/master --to=${CIRCLE_SHA1}",
-    "defaults": "webpack-defaults"
+    "defaults": "./bin/index.js"
   },
   "files": [
     "bin",

@@ -62,7 +62,6 @@ module.exports = (config) => {
       author: existing.author || `${name}`,
       homepage: `https://github.com/${repository}`,
       bugs: `https://github.com/${repository}/issues`,
-      bin: existing.bin || '',
       main: existing.main || 'dist/cjs.js',
       engines: {
         node: `>= ${config.maintLTS} <7.0.0 || >= ${config.activeLTS}`,
