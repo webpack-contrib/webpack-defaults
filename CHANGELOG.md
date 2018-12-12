@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.1"></a>
+## [3.0.1](https://github.com/webpack-contrib/webpack-defaults/compare/v3.0.0...v3.0.1) (2018-12-12)
+
+
+### Bug Fixes
+
+* change job order for appveyor (from low to high `nodejs` version)
+* use `node@6` for canary testing on CircleCI
+* use `@webpack-contrib/defaults` in package ([bb43bdf](https://github.com/webpack-contrib/webpack-defaults/commit/bb43bdf))
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/webpack-contrib/webpack-defaults/compare/v2.6.0...v3.0.0) (2018-12-12)
 
