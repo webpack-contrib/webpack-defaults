@@ -21,13 +21,7 @@ const modules = (config) => {
   };
 };
 
-const plugins = (config) =>
-  [
-    new webpack.optimize.CommonsChunkPlugin({
-      names: ['runtime'],
-      minChunks: Infinity,
-    }),
-  ].concat(config.plugins || []);
+const plugins = (config) => [].concat(config.plugins || []);
 
 const output = (config) => {
   return {
@@ -42,6 +36,7 @@ const output = (config) => {
 
 export default function(fixture, config, options) {
   config = {
+    mode: 'development',
     devtool: config.devtool || 'sourcemap',
     context: path.resolve(__dirname, '..', 'fixtures'),
     entry: `./${fixture}`,
@@ -52,17 +47,23 @@ export default function(fixture, config, options) {
 
   options = Object.assign({ output: false }, options);
 
-  if (options.output) del.sync(config.output.path);
+  if (options.output) {
+    del.sync(config.output.path);
+  }
 
   const compiler = webpack(config);
 
-  if (!options.output) compiler.outputFileSystem = new MemoryFS();
+  if (!options.output) {
+    compiler.outputFileSystem = new MemoryFS();
+  }
 
   return new Promise((resolve, reject) =>
-    compiler.run((err, stats) => {
-      if (err) reject(err);
+    compiler.run((error, stats) => {
+      if (error) {
+        reject(error);
+      }
 
-      resolve(stats);
+      return resolve(stats);
     })
   );
 }
