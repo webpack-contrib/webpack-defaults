@@ -1,5 +1,5 @@
 {
-  "name": "webpack-defaults",
+  "name": "@webpack-contrib/defaults",
   "version": "3.0.0",
   "description": "Project configuration and boilerplate defaults for webpack projects",
   "license": "MIT",
