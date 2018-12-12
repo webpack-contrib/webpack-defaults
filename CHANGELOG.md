@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/webpack-contrib/webpack-defaults/compare/v2.6.0...v3.0.0) (2018-12-12)
+
+
+### Bug Fixes
+
+* typo in `security` command (`scripts`) ([#148](https://github.com/webpack-contrib/webpack-defaults/issues/148)) ([7df6f45](https://github.com/webpack-contrib/webpack-defaults/commit/7df6f45))
+* ignore IntelliJ IDEA files (`*.iml`) ([#146](https://github.com/webpack-contrib/webpack-defaults/issues/146)) ([565c814](https://github.com/webpack-contrib/webpack-defaults/commit/565c814))
+* `husky` hooks setup ([#142](https://github.com/webpack-contrib/webpack-defaults/issues/142)) ([cd50463](https://github.com/webpack-contrib/webpack-defaults/commit/cd50463))
+* switch from `webpack-defaults` to `[@webpack-contrib](https://github.com/webpack-contrib)/defaults` ([#147](https://github.com/webpack-contrib/webpack-defaults/issues/147)) ([29a7013](https://github.com/webpack-contrib/webpack-defaults/commit/29a7013))
+* bin field problem ([91f54d2](https://github.com/webpack-contrib/webpack-defaults/commit/91f54d2))
+* remove commitlint from templates ([f96786f](https://github.com/webpack-contrib/webpack-defaults/commit/f96786f))
+
+
+### Features
+
+* new pull request template ([#140](https://github.com/webpack-contrib/webpack-defaults/issues/140)) ([4fcadf5](https://github.com/webpack-contrib/webpack-defaults/commit/4fcadf5))
+* update deps and required configuration
+
+### BREAKING CHANGE
+
+* switch to `babel@7`
+
+
+
 <a name="2.6.0"></a>
 ## [2.6.0](https://github.com/webpack-contrib/webpack-defaults/compare/v2.5.0...v2.6.0) (2018-09-05)
 
