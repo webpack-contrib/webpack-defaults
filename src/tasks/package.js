@@ -16,7 +16,6 @@ const devPackages = [
   'standard-version',
   '@commitlint/cli',
   '@commitlint/config-conventional',
-  'conventional-github-releaser',
   'husky',
 
   // Jest
@@ -34,7 +33,6 @@ const devPackages = [
   'eslint-plugin-import',
   'eslint-plugin-prettier',
   'lint-staged',
-  'pre-commit',
   'prettier',
 
   // Webpack
@@ -77,9 +75,6 @@ module.exports = (config) => {
         commitlint: 'commitlint',
         commitmsg: 'commitlint -e $GIT_PARAMS',
         lint: 'eslint --cache src test',
-        'ci:lint:commits':
-          'commitlint --from=${CIRCLE_BRANCH} --to=${CIRCLE_SHA1}',
-        'lint-staged': 'lint-staged',
         prebuild: 'npm run clean',
         prepublish: 'npm run build',
         release: 'standard-version',
@@ -90,6 +85,8 @@ module.exports = (config) => {
         'ci:lint': 'npm run lint && npm run security',
         'ci:test': 'npm run test -- --runInBand',
         'ci:coverage': 'npm run test:coverage -- --runInBand',
+        'ci:lint:commits':
+          'commitlint --from=origin/master --to=${CIRCLE_SHA1}',
         defaults: 'webpack-defaults',
       },
       files: existing.files || ['dist/', 'lib/', 'index.js'],
@@ -110,20 +107,20 @@ module.exports = (config) => {
           ],
         ],
       },
-      jest: { testEnvironment: 'node' },
-      'lint-staged': {
-        '*.js': ['eslint --fix', 'git add'],
-      },
       husky: {
         hooks: {
           'pre-commit': 'lint-staged',
         },
+      },
+      'lint-staged': {
+        '*.js': ['eslint --fix', 'git add'],
       },
       commitlint: {
         extends: ['@commitlint/config-conventional'],
       },
     })
     .save();
+
   install(packages, { dev: false });
   install(devPackages);
   // Require for `jest`
