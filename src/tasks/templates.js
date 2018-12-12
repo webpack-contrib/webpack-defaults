@@ -12,7 +12,6 @@ const files = [
   '.editorconfig',
   '.eslintrc.js',
   '.prettierrc',
-  'commitlint.config.js',
   'appveyor.yml',
   'LICENSE',
 ];
