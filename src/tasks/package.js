@@ -89,7 +89,7 @@ module.exports = (config) => {
         defaults: 'webpack-defaults',
       },
       files: existing.files || ['dist/', 'lib/', 'index.js'],
-      peerDependencies: existing.peerDependencies || { webpack: '^4.3.0' },
+      peerDependencies: existing.peerDependencies || { webpack: '^4.0.0' },
       dependencies: existing.dependencies || {},
       devDependencies: existing.devDependencies || {},
       keywords: existing.keywords || ['webpack'],
