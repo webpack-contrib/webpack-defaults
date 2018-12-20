@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.2"></a>
+## [3.0.2](https://github.com/webpack-contrib/webpack-defaults/compare/v3.0.1...v3.0.2) (2018-12-20)
+
+
+### Bug Fixes
+
+* relax minimum required nodejs ([#154](https://github.com/webpack-contrib/webpack-defaults/issues/154)) ([11cabb6](https://github.com/webpack-contrib/webpack-defaults/commit/11cabb6))
+* relax minimum required webpack version ([#155](https://github.com/webpack-contrib/webpack-defaults/issues/155)) ([acca23e](https://github.com/webpack-contrib/webpack-defaults/commit/acca23e))
+
+
+
 <a name="3.0.1"></a>
 ## [3.0.1](https://github.com/webpack-contrib/webpack-defaults/compare/v3.0.0...v3.0.1) (2018-12-12)
 
