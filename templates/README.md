@@ -25,17 +25,21 @@ $ npm install ${package} --save-dev
 ```
 
 <!-- isLoader ? use(this) : delete(isPlugin) -->
+
 Then add the loader to your `webpack` config. For example:
 
 <!-- isPlugin ? use(this) : delete(isLoader) -->
+
 Then add the plugin to your `webpack` config. For example:
 
 **file.ext**
+
 ```js
 import file from 'file.ext';
 ```
 
 <!-- isLoader ? use(this) : delete(isPlugin) -->
+
 **webpack.config.js**
 
 ```js
@@ -47,16 +51,17 @@ module.exports = {
         use: [
           {
             loader: `${name.toLowerCase()}-loader`,
-            options: {...options}
-          }
-        ]
-      }
-    ]
-  }
-}
+            options: { ...options },
+          },
+        ],
+      },
+    ],
+  },
+};
 ```
 
 <!-- isPlugin ? use(this) : delete(isLoader) -->
+
 **webpack.config.js**
 
 ```js
@@ -79,22 +84,36 @@ Default: `[type|null]`
 [ option description ]
 
 <!-- isLoader ? use(this) : delete(isPlugin) -->
+
+**webpack.config.js**
+
 ```js
-// in your webpack.config.js
-{
-  loader: `${name.toLowerCase()}-loader`,
-  options: {
-    [option]: ''
-  }
-}
+module.exports = {
+  module: {
+    rules: [
+      {
+        loader: `${name.toLowerCase()}-loader`,
+        options: {
+          [option]: '',
+        },
+      },
+    ],
+  },
+};
 ```
 
 <!-- isPlugin ? use(this) : delete(isLoader) -->
+
+**webpack.config.js**
+
 ```js
-// in your webpack.config.js
-new `${name}`Plugin({
-  [option]: ''
-})
+module.exports = {
+  plugins: [
+    new `${name}`Plugin({
+      [option]: ''
+    })
+  ]
+};
 ```
 
 ## Examples
@@ -102,16 +121,19 @@ new `${name}`Plugin({
 [ example outline text ]
 
 **webpack.config.js**
+
 ```js
 // Example setup here..
 ```
 
 **file.ext**
+
 ```js
 // Source code here...
 ```
 
 **bundle.js**
+
 ```js
 // Bundle code here...
 ```
@@ -128,21 +150,15 @@ Please take a moment to read our contributing guidelines if you haven't yet done
 
 [npm]: https://img.shields.io/npm/v/${package}.svg
 [npm-url]: https://npmjs.com/package/${package}
-
 [node]: https://img.shields.io/node/v/${package}.svg
 [node-url]: https://nodejs.org
-
 [deps]: https://david-dm.org/webpack-contrib/${package}.svg
 [deps-url]: https://david-dm.org/webpack-contrib/${package}
-
-[tests]: 	https://img.shields.io/circleci/project/github/webpack-contrib/${package}.svg
+[tests]: https://img.shields.io/circleci/project/github/webpack-contrib/${package}.svg
 [tests-url]: https://circleci.com/gh/webpack-contrib/${package}
-
 [cover]: https://codecov.io/gh/webpack-contrib/${package}/branch/master/graph/badge.svg
 [cover-url]: https://codecov.io/gh/webpack-contrib/${package}
-
 [chat]: https://img.shields.io/badge/gitter-webpack%2Fwebpack-brightgreen.svg
 [chat-url]: https://gitter.im/webpack/webpack
-
 [size]: https://packagephobia.now.sh/badge?p=${package}
 [size-url]: https://packagephobia.now.sh/result?p=${package}
