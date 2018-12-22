@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.5"></a>
+## [3.0.5](https://github.com/webpack-contrib/webpack-defaults/compare/v3.0.3...v3.0.5) (2018-12-22)
+
+
+### Bug Fixes
+
+* allow failures for canary builds ([#159](https://github.com/webpack-contrib/webpack-defaults/issues/159)) ([96d1d3c](https://github.com/webpack-contrib/webpack-defaults/commit/96d1d3c))
+* appveyor job name fro canary tests ([#158](https://github.com/webpack-contrib/webpack-defaults/issues/158)) ([d9d6aca](https://github.com/webpack-contrib/webpack-defaults/commit/d9d6aca))
+
+
+
 <a name="3.0.3"></a>
 ## [3.0.3](https://github.com/webpack-contrib/webpack-defaults/compare/v3.0.2...v3.0.3) (2018-12-21)
 
