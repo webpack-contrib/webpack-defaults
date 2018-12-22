@@ -27,6 +27,10 @@ environment:
 build: 'off'
 matrix:
   fast_finish: true
+  allow_failures:
+    - nodejs_version: '8'
+      webpack_version: next
+      job_part: test
 install:
   - ps: Install-Product node $env:nodejs_version x64
   - npm i -g npm@latest

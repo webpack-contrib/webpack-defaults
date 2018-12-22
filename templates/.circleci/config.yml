@@ -29,7 +29,7 @@ canary_tests: &canary_tests
         command: npm i --no-save webpack@next
     - run:
         name: Run Test.
-        command: if [[ $(compver --name webpack --gte next --lt latest) < 1 ]] ; then printf "Next is older than Latest - Skipping Canary Suite"; else npm run ci:test; fi
+        command: if [[ $(compver --name webpack --gte next --lt latest) < 1 ]] ; then printf "Next is older than Latest - Skipping Canary Suite"; else npm run ci:test || true; fi
 
 version: 2
 jobs:
