@@ -122,6 +122,4 @@ module.exports = (config) => {
 
   install(packages, { dev: false });
   install(devPackages);
-  // Require for `jest`
-  install({ 'babel-core': '^7.0.0-bridge.0' });
 };
