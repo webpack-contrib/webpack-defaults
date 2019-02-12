@@ -1,8 +1,8 @@
 import webpack from './helpers/compiler';
 
-describe('Options', () => {
+describe('options', () => {
   describe('name', () => {
-    test('{Boolean}', async () => {
+    it('true', async () => {
       const config = {
         loader: {
           test: /\.js$/,

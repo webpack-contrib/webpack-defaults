@@ -1,7 +1,7 @@
 import webpack from './helpers/compiler';
 
-describe('Loader', () => {
-  test('Defaults', async () => {
+describe('loader', () => {
+  it('should works', async () => {
     const config = {
       loader: {
         test: /\.js$/,
