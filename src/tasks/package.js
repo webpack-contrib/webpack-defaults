@@ -68,13 +68,13 @@ module.exports = (config) => {
       },
       scripts: {
         start: 'npm run build -- -w',
+        prebuild: 'npm run clean',
         build:
           "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js' --copy-files",
         clean: 'del-cli dist',
         commitlint: 'commitlint',
         commitmsg: 'commitlint -e $GIT_PARAMS',
         lint: 'eslint --cache src test',
-        prebuild: 'npm run clean',
         prepublish: 'npm run build',
         release: 'standard-version',
         security: 'npm audit',
