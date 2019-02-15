@@ -11,7 +11,6 @@ const files = [
   '.github/CONTRIBUTING.md',
   '.editorconfig',
   '.eslintrc.js',
-  '.prettierrc',
   'appveyor.yml',
   'LICENSE',
 ];
