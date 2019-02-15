@@ -119,6 +119,11 @@ module.exports = (config) => {
       commitlint: {
         extends: ['@commitlint/config-conventional'],
       },
+      prettier: {
+        singleQuote: true,
+        trailingComma: 'es5',
+        arrowParens: 'always',
+      },
     })
     .save();
 
