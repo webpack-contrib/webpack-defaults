@@ -84,7 +84,7 @@ module.exports = (config) => {
         pretest: 'npm run lint',
         test: 'npm run test:only',
         'ci:lint': 'npm run lint && npm run security',
-        'ci:test': 'npm run test -- --runInBand',
+        'ci:test': 'npm run test:only -- --runInBand',
         'ci:coverage': 'npm run test:coverage -- --runInBand',
         'ci:lint:commits':
           'commitlint --from=origin/master --to=${CIRCLE_SHA1}',
