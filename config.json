@@ -1,6 +1,5 @@
 {
   "tasks": [
-    "eslint",
     "git",
     "issue_template",
     "package",
