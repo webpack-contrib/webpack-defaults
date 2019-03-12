@@ -72,8 +72,7 @@ module.exports = (config) => {
         build:
           "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js' --copy-files",
         clean: 'del-cli dist',
-        commitlint: 'commitlint',
-        commitmsg: 'commitlint -e $GIT_PARAMS',
+        commitlint: 'commitlint --from=master',
         lint: 'eslint --cache src test',
         prepublish: 'npm run build',
         release: 'standard-version',
@@ -111,6 +110,7 @@ module.exports = (config) => {
       husky: {
         hooks: {
           'pre-commit': 'lint-staged',
+          'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
         },
       },
       'lint-staged': {
