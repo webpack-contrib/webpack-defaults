@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/webpack-contrib/webpack-defaults/compare/v3.0.5...v3.1.0) (2019-03-18)
+
+
+### Bug Fixes
+
+* ci test script ([#164](https://github.com/webpack-contrib/webpack-defaults/issues/164)) ([b859e88](https://github.com/webpack-contrib/webpack-defaults/commit/b859e88))
+* commit linting ([#166](https://github.com/webpack-contrib/webpack-defaults/issues/166)) ([6addc2d](https://github.com/webpack-contrib/webpack-defaults/commit/6addc2d))
+
+
+### Features
+
+* `test:only` script ([5c1a5b8](https://github.com/webpack-contrib/webpack-defaults/commit/5c1a5b8))
+* add `cjs` test ([#161](https://github.com/webpack-contrib/webpack-defaults/issues/161)) ([d6c9531](https://github.com/webpack-contrib/webpack-defaults/commit/d6c9531))
+
+
+
 <a name="3.0.5"></a>
 ## [3.0.5](https://github.com/webpack-contrib/webpack-defaults/compare/v3.0.3...v3.0.5) (2018-12-22)
 
