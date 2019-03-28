@@ -24,7 +24,6 @@ const devPackages = [
 
   // Babel
   '@babel/cli',
-  '@babel/polyfill',
   '@babel/core',
   '@babel/preset-env',
 
@@ -102,7 +101,6 @@ module.exports = (config) => {
               targets: {
                 node: config.maintLTS,
               },
-              useBuiltIns: 'usage',
             },
           ],
         ],
