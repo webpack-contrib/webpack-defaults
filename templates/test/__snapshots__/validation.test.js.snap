@@ -1,14 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`validation 1`] = `
-Array [
-  "./fixture.js
-Module build failed (from /Users/tiagocosta/projects/webpack-defaults/templates/src/index.js):
-ValidationError: Loader Invalid Options
-
-options.name should be boolean
-
-    at validateOptions (/Users/tiagocosta/projects/webpack-defaults/node_modules/schema-utils/src/validateOptions.js:32:11)
-    at Object.loader (/Users/tiagocosta/projects/webpack-defaults/templates/src/index.js:13:3)",
-]
-`;
+exports[`validation 1`] = `Array []`;
