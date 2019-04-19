@@ -4,7 +4,7 @@ it('validation', async () => {
   const config = {
     loader: {
       test: /\.js$/,
-      options: { name: 'fail' },
+      options: { name: false },
     },
   };
 

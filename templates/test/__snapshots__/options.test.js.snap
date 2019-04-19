@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`options name true 1`] = `
+"
+  /**
+   * Loader API Version: 2
+   * Is this in \\"webpack mode\\": true
+   */
+  /**
+   * Original Source From Loader
+   */
+  console.log('foo');
+"
+`;
