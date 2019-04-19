@@ -73,7 +73,7 @@ module.exports = (config) => {
         clean: 'del-cli dist',
         commitlint: 'commitlint --from=master',
         lint: 'eslint --cache src test',
-        prepublish: 'npm run build',
+        prepare: 'npm run build',
         release: 'standard-version',
         security: 'npm audit',
         'test:only': 'jest',
