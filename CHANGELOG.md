@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.1.2"></a>
+## [3.1.2](https://github.com/webpack-contrib/webpack-defaults/compare/v3.1.1...v3.1.2) (2019-04-23)
+
+
+### Bug Fixes
+
+* replace prepublish npm script with prepare
+
+
+
 <a name="3.1.1"></a>
 ## [3.1.1](https://github.com/webpack-contrib/webpack-defaults/compare/v3.1.0...v3.1.1) (2019-03-28)
 
