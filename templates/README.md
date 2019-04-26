@@ -154,8 +154,8 @@ Please take a moment to read our contributing guidelines if you haven't yet done
 [node-url]: https://nodejs.org
 [deps]: https://david-dm.org/webpack-contrib/${package}.svg
 [deps-url]: https://david-dm.org/webpack-contrib/${package}
-[tests]: https://img.shields.io/circleci/project/github/webpack-contrib/${package}.svg
-[tests-url]: https://circleci.com/gh/webpack-contrib/${package}
+[tests]: https://dev.azure.com/webpack-contrib/${package}/_apis/build/status/webpack-contrib.${package}?branchName=master
+[tests-url]: https://dev.azure.com/webpack-contrib/${package}/_build/latest?definitionId=2&branchName=master
 [cover]: https://codecov.io/gh/webpack-contrib/${package}/branch/master/graph/badge.svg
 [cover-url]: https://codecov.io/gh/webpack-contrib/${package}
 [chat]: https://img.shields.io/badge/gitter-webpack%2Fwebpack-brightgreen.svg
