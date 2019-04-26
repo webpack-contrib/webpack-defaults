@@ -44,7 +44,7 @@ const devPackages = [
   '@webpack-contrib/eslint-config-webpack',
 ];
 
-module.exports = (config) => {
+module.exports = () => {
   const { name } = meta;
   const github = gitUsername();
   const packageName = path.basename(process.cwd());
@@ -65,7 +65,7 @@ module.exports = (config) => {
       bugs: `https://github.com/${repository}/issues`,
       main: existing.main || 'dist/cjs.js',
       engines: {
-        node: `>= ${config.maintLTS}`,
+        node: `>= 6.9.0`,
       },
       scripts: {
         start: 'npm run build -- -w',
@@ -90,35 +90,6 @@ module.exports = (config) => {
       dependencies: existing.dependencies || {},
       devDependencies: existing.devDependencies || {},
       keywords: existing.keywords || ['webpack'],
-      babel: {
-        presets: [
-          [
-            '@babel/preset-env',
-            {
-              targets: {
-                node: config.maintLTS,
-              },
-            },
-          ],
-        ],
-      },
-      husky: {
-        hooks: {
-          'pre-commit': 'lint-staged',
-          'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
-        },
-      },
-      'lint-staged': {
-        '*.js': ['eslint --fix', 'git add'],
-      },
-      commitlint: {
-        extends: ['@commitlint/config-conventional'],
-      },
-      prettier: {
-        singleQuote: true,
-        trailingComma: 'es5',
-        arrowParens: 'always',
-      },
     })
     .save();
 

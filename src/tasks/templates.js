@@ -10,7 +10,11 @@ const files = [
   '.github/CONTRIBUTING.md',
   '.editorconfig',
   '.eslintrc.js',
+  '.prettierrc.js',
   'azure-pipelines.yml',
+  'commitlint.config.js',
+  'husky.config.js',
+  'lint-staged.config.js',
   'LICENSE',
 ];
 
