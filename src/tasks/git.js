@@ -26,8 +26,9 @@ const gitignore = [
 
 const gitattributes = [
   '* text=auto',
-  'package-lock.json -diff',
+  'bin/* eol=lf',
   'yarn.lock -diff',
+  'package-lock.json -diff',
 ];
 
 module.exports = () => {

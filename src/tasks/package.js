@@ -16,10 +16,12 @@ const devPackages = [
   'standard-version',
   '@commitlint/cli',
   '@commitlint/config-conventional',
+  'commitlint-azure-pipelines-cli',
   'husky',
 
   // Jest
   'jest',
+  'jest-junit',
   'babel-jest',
 
   // Babel
@@ -80,12 +82,7 @@ module.exports = (config) => {
         'test:watch': 'jest --watch',
         'test:coverage': "jest --collectCoverageFrom='src/**/*.js' --coverage",
         pretest: 'npm run lint',
-        test: 'npm run test:only',
-        'ci:lint': 'npm run lint && npm run security',
-        'ci:test': 'npm run test:only -- --runInBand',
-        'ci:coverage': 'npm run test:coverage -- --runInBand',
-        'ci:lint:commits':
-          'commitlint --from=origin/master --to=${CIRCLE_SHA1}',
+        test: 'npm run test:coverage',
         defaults: 'webpack-defaults',
       },
       files: existing.files || ['dist/', 'lib/', 'index.js'],
