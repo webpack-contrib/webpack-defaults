@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.0.1"></a>
+## [4.0.1](https://github.com/webpack-contrib/webpack-defaults/compare/v4.0.0...v4.0.1) (2019-04-26)
+
+
+### Bug Fixes
+
+* bin ([fe37330](https://github.com/webpack-contrib/webpack-defaults/commit/fe37330))
+* package name ([f79aa9f](https://github.com/webpack-contrib/webpack-defaults/commit/f79aa9f))
+
+
+
 <a name="4.0.0"></a>
 # [4.0.0](https://github.com/webpack-contrib/webpack-defaults/compare/v3.1.2...v4.0.0) (2019-04-26)
 
