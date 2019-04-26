@@ -55,7 +55,7 @@ module.exports = () => {
 
   json('package.json')
     .set({
-      name: `${packageName}`,
+      name: existing.name || `${packageName}`,
       version: existing.version || '1.0.0',
       description: existing.description || '',
       license: existing.license || 'MIT',
