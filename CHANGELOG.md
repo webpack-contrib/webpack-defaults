@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/webpack-contrib/webpack-defaults/compare/v3.1.2...v4.0.0) (2019-04-26)
+
+
+### Features
+
+* migrate on azure pipelines ([#172](https://github.com/webpack-contrib/webpack-defaults/issues/172)) ([6f77d5f](https://github.com/webpack-contrib/webpack-defaults/commit/6f77d5f))
+
+
+### BREAKING CHANGES
+
+* now we use `azure-pipelines` for CI
+
+
+
 <a name="3.1.2"></a>
 ## [3.1.2](https://github.com/webpack-contrib/webpack-defaults/compare/v3.1.1...v3.1.2) (2019-04-23)
 
