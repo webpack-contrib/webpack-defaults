@@ -74,7 +74,7 @@ module.exports = () => {
           "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js' --copy-files",
         clean: 'del-cli dist',
         commitlint: 'commitlint --from=master',
-        lint: 'eslint --cache src test',
+        lint: 'eslint --cache src test --ignore-path .gitignore',
         prepare: 'npm run build',
         release: 'standard-version',
         security: 'npm audit',
