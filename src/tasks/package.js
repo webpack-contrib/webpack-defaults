@@ -83,7 +83,7 @@ module.exports = () => {
         'test:coverage': "jest --collectCoverageFrom='src/**/*.js' --coverage",
         pretest: 'npm run lint',
         test: 'npm run test:coverage',
-        defaults: 'webpack-defaults',
+        defaults: existing.scripts.defaults || 'webpack-defaults',
       },
       files: existing.files || ['dist/', 'lib/', 'index.js'],
       peerDependencies: existing.peerDependencies || { webpack: '^4.0.0' },

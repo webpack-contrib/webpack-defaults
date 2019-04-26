@@ -12,6 +12,7 @@ const files = [
   '.eslintrc.js',
   '.prettierrc.js',
   'azure-pipelines.yml',
+  'babel.config.js',
   'commitlint.config.js',
   'husky.config.js',
   'lint-staged.config.js',

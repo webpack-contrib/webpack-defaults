@@ -19,7 +19,7 @@ about: Something went awry and you'd like to tell us about it.
 * Node Version:
 * NPM Version:
 * webpack Version:
-* @webpack-contrib/defaults Version:
+* webpack-defaults Version:
 
 ### Expected Behavior
 
@@ -33,7 +33,7 @@ about: Something went awry and you'd like to tell us about it.
 
 ```js
   // webpack.config.js
-  // If your bitchin' code blocks are over 20 lines, please paste a link to a gist
+  // If your code blocks are over 20 lines, please paste a link to a gist
   // (https://gist.github.com).
 ```
 

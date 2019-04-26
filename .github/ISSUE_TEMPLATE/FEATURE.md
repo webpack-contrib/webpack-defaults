@@ -19,7 +19,7 @@ about: Suggest an idea for this project
 * Node Version:
 * NPM Version:
 * webpack Version:
-* @webpack-contrib/defaults Version:
+* webpack-defaults Version:
 
 ### Feature Proposal
 

@@ -19,7 +19,7 @@ about: Would you like something work differently? Have an alternative approach? 
 * Node Version:
 * NPM Version:
 * webpack Version:
-* @webpack-contrib/defaults Version:
+* webpack-defaults Version:
 
 
 ### Expected Behavior / Situation

@@ -1,5 +1,5 @@
 {
-  "name": "@webpack-contrib/defaults",
+  "name": "webpack-defaults",
   "version": "3.1.2",
   "description": "Project configuration and boilerplate defaults for webpack projects",
   "license": "MIT",
@@ -10,9 +10,6 @@
   },
   "homepage": "https://github.com/webpack-contrib/webpack-defaults",
   "bugs": "https://github.com/webpack-contrib/webpack-defaults/issues",
-  "bin": {
-    "webpack-defaults": "bin/index.js"
-  },
   "main": "dist/cjs.js",
   "engines": {
     "node": ">= 6.9.0"
@@ -24,19 +21,15 @@
     "clean": "del-cli dist",
     "commitlint": "commitlint --from=master",
     "lint": "eslint --cache src test",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "release": "standard-version",
     "security": "npm audit",
     "test:only": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage",
     "pretest": "npm run lint",
-    "test": "npm run test:only",
-    "ci:lint": "npm run lint && npm run security",
-    "ci:test": "npm run test:only -- --runInBand",
-    "ci:coverage": "npm run test:coverage -- --runInBand",
-    "ci:lint:commits": "commitlint --from=origin/master --to=${CIRCLE_SHA1}",
-    "defaults": "webpack-defaults"
+    "test": "npm run test:coverage",
+    "defaults": "npm run build && node bin/index.js"
   },
   "files": [
     "bin",
@@ -52,8 +45,10 @@
   "dependencies": {
     "chalk": "^2.3.0",
     "git-username": "^1.0.0",
+    "loader-utils": "^1.2.3",
     "mrm-core": "^3.1.1",
     "path-exists": "^3.0.0",
+    "schema-utils": "^1.0.0",
     "user-meta": "^1.0.0"
   },
   "devDependencies": {
@@ -66,6 +61,7 @@
     "@webpack-contrib/defaults": "^3.0.5",
     "@webpack-contrib/eslint-config-webpack": "^3.0.0",
     "babel-jest": "^24.5.0",
+    "commitlint-azure-pipelines-cli": "^1.0.1",
     "cross-env": "^5.1.1",
     "del": "^4.0.0",
     "del-cli": "^1.1.0",
@@ -74,6 +70,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "husky": "^1.2.0",
     "jest": "^24.5.0",
+    "jest-junit": "^6.3.0",
     "lint-staged": "^8.1.0",
     "memory-fs": "^0.4.1",
     "pre-commit": "^1.2.2",
@@ -83,40 +80,5 @@
   },
   "keywords": [
     "webpack"
-  ],
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": "6.9.0"
-          },
-          "useBuiltIns": "usage"
-        }
-      ]
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "arrowParens": "always"
-  }
+  ]
 }
