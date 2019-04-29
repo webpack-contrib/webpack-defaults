@@ -24,11 +24,11 @@
     "prepare": "npm run build",
     "release": "standard-version",
     "security": "npm audit",
-    "test:only": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage",
+    "test:only": "cross-env NODE_ENV=test jest",
+    "test:watch": "cross-env NODE_ENV=test jest --watch",
+    "test:coverage": "cross-env NODE_ENV=test jest --collectCoverageFrom='src/**/*.js' --coverage",
     "pretest": "npm run lint",
-    "test": "npm run test:coverage",
+    "test": "cross-env NODE_ENV=test npm run test:coverage",
     "defaults": "npm run build && node bin/index.js"
   },
   "files": [
