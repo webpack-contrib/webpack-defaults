@@ -18,6 +18,7 @@ const devPackages = [
   '@commitlint/config-conventional',
   'commitlint-azure-pipelines-cli',
   'husky',
+  'npm-run-all',
 
   // Jest
   'jest',
@@ -32,7 +33,7 @@ const devPackages = [
   // ESLint
   'eslint',
   'eslint-plugin-import',
-  'eslint-plugin-prettier',
+  'eslint-config-prettier',
   'lint-staged',
   'prettier',
 
@@ -74,7 +75,10 @@ module.exports = () => {
           'cross-env NODE_ENV=production babel src -d dist --ignore "src/**/*.test.js" --copy-files',
         clean: 'del-cli dist',
         commitlint: 'commitlint --from=master',
-        lint: 'eslint --cache src test --ignore-path .gitignore',
+        'lint:prettier':
+          'prettier "{**/*,*}.{js,json,md,yml,css}" --list-different',
+        'lint:js': 'eslint --cache src test',
+        lint: 'npm-run-all -l -p "lint:**"',
         prepare: 'npm run build',
         release: 'standard-version',
         security: 'npm audit',
