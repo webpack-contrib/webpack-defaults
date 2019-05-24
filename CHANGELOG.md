@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/webpack-contrib/webpack-defaults/compare/v4.0.1...v4.1.0) (2019-05-24)
+
+
+### Bug Fixes
+
+* template copy files ([8039365](https://github.com/webpack-contrib/webpack-defaults/commit/8039365))
+* windows compatibility scripts ([0ed1f9d](https://github.com/webpack-contrib/webpack-defaults/commit/0ed1f9d))
+
+
+### Features
+
+* eslint now respect `.gitignore` ([148a5eb](https://github.com/webpack-contrib/webpack-defaults/commit/148a5eb))
+* prettier for other file types ([f94f343](https://github.com/webpack-contrib/webpack-defaults/commit/f94f343))
+* set `test` env for tests commands ([a7b057c](https://github.com/webpack-contrib/webpack-defaults/commit/a7b057c))
+
+
+
 <a name="4.0.1"></a>
 ## [4.0.1](https://github.com/webpack-contrib/webpack-defaults/compare/v4.0.0...v4.0.1) (2019-04-26)
 
