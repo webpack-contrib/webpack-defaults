@@ -8,16 +8,16 @@ const modules = (config) => {
     rules: config.rules
       ? config.rules
       : config.loader
-        ? [
-            {
-              test: config.loader.test || /\.js$/,
-              use: {
-                loader: path.resolve(__dirname, '../../src'),
-                options: config.loader.options || {},
-              },
+      ? [
+          {
+            test: config.loader.test || /\.js$/,
+            use: {
+              loader: path.resolve(__dirname, '../../src'),
+              options: config.loader.options || {},
             },
-          ]
-        : [],
+          },
+        ]
+      : [],
   };
 };
 
