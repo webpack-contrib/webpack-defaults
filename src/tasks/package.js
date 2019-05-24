@@ -71,7 +71,7 @@ module.exports = () => {
         start: 'npm run build -- -w',
         prebuild: 'npm run clean',
         build:
-          "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js' --copy-files",
+          'cross-env NODE_ENV=production babel src -d dist --ignore "src/**/*.test.js" --copy-files',
         clean: 'del-cli dist',
         commitlint: 'commitlint --from=master',
         lint: 'eslint --cache src test --ignore-path .gitignore',
@@ -81,7 +81,7 @@ module.exports = () => {
         'test:only': 'cross-env NODE_ENV=test jest',
         'test:watch': 'cross-env NODE_ENV=test jest --watch',
         'test:coverage':
-          "cross-env NODE_ENV=test jest --collectCoverageFrom='src/**/*.js' --coverage",
+          'cross-env NODE_ENV=test jest --collectCoverageFrom="src/**/*.js" --coverage',
         pretest: 'npm run lint',
         test: 'cross-env NODE_ENV=test npm run test:coverage',
         defaults: existing.scripts.defaults || 'webpack-defaults',
