@@ -30,7 +30,7 @@ const testFiles = [
   'test/helpers/compiler.js',
 ];
 
-// These files will by created only once
+// These files will be created only once
 const filesOnce = [
   'src/index.js',
   'src/cjs.js',
