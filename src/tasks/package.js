@@ -66,7 +66,7 @@ module.exports = () => {
       bugs: `https://github.com/${repository}/issues`,
       main: existing.main || 'dist/cjs.js',
       engines: {
-        node: `>= 6.9.0`,
+        node: `>= 8.9.0`,
       },
       scripts: {
         start: 'npm run build -- -w',
