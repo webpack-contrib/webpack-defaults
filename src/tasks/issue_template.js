@@ -8,10 +8,10 @@ module.exports = () => {
   const staticTemplates = [
     '.github/ISSUE_TEMPLATE/DOCS.md',
     '.github/ISSUE_TEMPLATE/SUPPORT.md',
+    '.github/ISSUE_TEMPLATE.md',
   ];
 
   const dynamicTemplates = [
-    'ISSUE_TEMPLATE.md',
     'ISSUE_TEMPLATE/BUG.md',
     'ISSUE_TEMPLATE/FEATURE.md',
     'ISSUE_TEMPLATE/MODIFICATION.md',

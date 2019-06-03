@@ -18,7 +18,7 @@ about: Would you like something work differently? Have an alternative approach? 
 - Node Version:
 - NPM Version:
 - webpack Version:
-- \${package} Version:
+- ${package} Version:
 
 ### Expected Behavior / Situation
 

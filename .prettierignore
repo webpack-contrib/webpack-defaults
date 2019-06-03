@@ -3,3 +3,7 @@
 /node_modules
 /test/fixtures
 CHANGELOG.md
+/templates/.github/ISSUE_TEMPLATE/BUG.md
+/templates/.github/ISSUE_TEMPLATE/FEATURE.md
+/templates/.github/ISSUE_TEMPLATE/MODIFICATION.md
+/templates/README.md
