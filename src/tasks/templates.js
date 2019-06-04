@@ -1,13 +1,15 @@
 const path = require('path');
 
 const pathExists = require('path-exists');
-const { copyFiles } = require('mrm-core');
+const { copyFiles, json, template } = require('mrm-core');
 
 // These files will be overwritten without any confirmation
 const files = [
+  '.github/ISSUE_TEMPLATE/DOCS.md',
+  '.github/ISSUE_TEMPLATE/SUPPORT.md',
+  '.github/ISSUE_TEMPLATE.md',
   '.github/CODEOWNERS',
   '.github/PULL_REQUEST_TEMPLATE.md',
-  '.github/CONTRIBUTING.md',
   '.github/FUNDING.yml',
   '.editorconfig',
   '.eslintignore',
@@ -38,7 +40,15 @@ const filesOnce = [
   'CHANGELOG.md',
 ];
 
+const dynamicTemplates = [
+  '.github/CONTRIBUTING.md',
+  '.github/ISSUE_TEMPLATE/BUG.md',
+  '.github/ISSUE_TEMPLATE/FEATURE.md',
+  '.github/ISSUE_TEMPLATE/MODIFICATION.md',
+];
+
 module.exports = () => {
+  const pkg = json('package.json');
   const templatesDir = path.resolve(__dirname, '../../templates');
 
   copyFiles(templatesDir, files);
@@ -48,6 +58,17 @@ module.exports = () => {
       copyFiles(templatesDir, testFiles, { overwrite: false });
     }
   });
+
+  for (const tmpl of dynamicTemplates) {
+    const file = template(
+      tmpl,
+      path.join(__dirname, `../../templates/${tmpl}`)
+    );
+
+    file
+      .apply({ package: pkg.get('name'), repo: pkg.get('repository') })
+      .save();
+  }
 
   copyFiles(templatesDir, filesOnce, { overwrite: false });
 };
