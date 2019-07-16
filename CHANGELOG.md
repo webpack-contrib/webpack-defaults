@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.0.2](https://github.com/webpack-contrib/webpack-defaults/compare/v5.0.1...v5.0.2) (2019-07-16)
+
+
+### Bug Fixes
+
+* lint-staged configuration ([#176](https://github.com/webpack-contrib/webpack-defaults/issues/176)) ([67fb0bc](https://github.com/webpack-contrib/webpack-defaults/commit/67fb0bc))
+
+
+
 ## [5.0.1](https://github.com/webpack-contrib/webpack-defaults/compare/v5.0.0...v5.0.1) (2019-06-25)
 
 
