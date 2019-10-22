@@ -76,7 +76,7 @@ module.exports = () => {
         clean: 'del-cli dist',
         commitlint: 'commitlint --from=master',
         'lint:prettier':
-          'prettier "{**/*,*}.{js,json,md,yml,css}" --list-different',
+          'prettier "{**/*,*}.{js,json,md,yml,css,ts}" --list-different',
         'lint:js': 'eslint --cache src test',
         lint: 'npm-run-all -l -p "lint:**"',
         prepare: 'npm run build',
