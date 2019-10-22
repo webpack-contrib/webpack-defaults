@@ -71,8 +71,7 @@ module.exports = () => {
       scripts: {
         start: 'npm run build -- -w',
         prebuild: 'npm run clean',
-        build:
-          'cross-env NODE_ENV=production babel src -d dist --ignore "src/**/*.test.js" --copy-files',
+        build: 'cross-env NODE_ENV=production babel src -d dist --copy-files',
         clean: 'del-cli dist',
         commitlint: 'commitlint --from=master',
         'lint:prettier':
