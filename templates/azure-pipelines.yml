@@ -36,8 +36,11 @@ jobs:
     pool:
       vmImage: ubuntu-16.04
     strategy:
-      maxParallel: 4
+      maxParallel: 5
       matrix:
+        node-13:
+          node_version: ^13.0.0
+          webpack_version: latest
         node-12:
           node_version: ^12.0.0
           webpack_version: latest
@@ -47,8 +50,8 @@ jobs:
         node-8:
           node_version: ^8.9.0
           webpack_version: latest
-        node-8-canary:
-          node_version: ^8.9.0
+        node-10-canary:
+          node_version: ^10.13.0
           webpack_version: next
           continue_on_error: true
     steps:
@@ -88,8 +91,11 @@ jobs:
     pool:
       vmImage: macOS-10.14
     strategy:
-      maxParallel: 4
+      maxParallel: 5
       matrix:
+        node-13:
+          node_version: ^13.0.0
+          webpack_version: latest
         node-12:
           node_version: ^12.0.0
           webpack_version: latest
@@ -99,8 +105,8 @@ jobs:
         node-8:
           node_version: ^8.9.0
           webpack_version: latest
-        node-8-canary:
-          node_version: ^8.9.0
+        node-10-canary:
+          node_version: ^10.13.0
           webpack_version: next
           continue_on_error: true
     steps:
@@ -140,8 +146,11 @@ jobs:
     pool:
       vmImage: windows-2019
     strategy:
-      maxParallel: 4
+      maxParallel: 5
       matrix:
+        node-13:
+          node_version: ^13.0.0
+          webpack_version: latest
         node-12:
           node_version: ^12.0.0
           webpack_version: latest
@@ -151,8 +160,8 @@ jobs:
         node-8:
           node_version: ^8.9.0
           webpack_version: latest
-        node-8-canary:
-          node_version: ^8.9.0
+        node-10-canary:
+          node_version: ^10.13.0
           webpack_version: next
           continue_on_error: true
     steps:
