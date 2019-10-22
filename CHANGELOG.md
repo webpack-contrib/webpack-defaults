@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.1.0](https://github.com/webpack-contrib/webpack-defaults/compare/v5.0.1...v5.1.0) (2019-10-22)
+
+
+### Bug Fixes
+
+* lint-staged configuration ([#176](https://github.com/webpack-contrib/webpack-defaults/issues/176)) ([67fb0bc](https://github.com/webpack-contrib/webpack-defaults/commit/67fb0bc))
+* run prettier on `ts` files ([c322cfa](https://github.com/webpack-contrib/webpack-defaults/commit/c322cfa))
+
+
+### Features
+
+* add node@13 to CI ([1a55ed6](https://github.com/webpack-contrib/webpack-defaults/commit/1a55ed6))
+
+
+
 ## [5.0.1](https://github.com/webpack-contrib/webpack-defaults/compare/v5.0.0...v5.0.1) (2019-06-25)
 
 
