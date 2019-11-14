@@ -77,7 +77,7 @@ module.exports = () => {
         security: 'npm audit',
         'lint:prettier':
           'prettier "{**/*,*}.{js,json,md,yml,css,ts}" --list-different',
-        'lint:js': 'eslint --cache src test',
+        'lint:js': 'eslint --cache .',
         lint: 'npm-run-all -l -p "lint:**"',
         'test:only': 'cross-env NODE_ENV=test jest',
         'test:watch': 'cross-env NODE_ENV=test jest --watch',
