@@ -23,10 +23,12 @@ jobs:
           node -v
           npm -v
         displayName: 'Print versions'
-      - task: Npm@1
+      - task: CacheBeta@1
         inputs:
-          command: custom
-          customCommand: ci
+          key: npm | $(Agent.OS) | package-lock.json
+          path: $(npm_config_cache)
+        displayName: 'Cache npm'
+      - script: npm ci
         displayName: 'Install dependencies'
       - script: npm run lint
         displayName: 'Run lint'
