@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.0](https://github.com/webpack-contrib/webpack-defaults/compare/v5.1.1...v6.0.0) (2019-11-14)
+
+
+### Features
+
+* more test utils
+* refactor test
+* cache dependencies on CI
+* support webpack@5
+* migrate on `memfs`
+
+
+### BREAKING CHANGES
+
+* minimum supported node version is 10.13.0
+
+
+
 ### [5.1.1](https://github.com/webpack-contrib/webpack-defaults/compare/v5.1.0...v5.1.1) (2019-10-22)
 
 

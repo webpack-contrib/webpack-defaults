@@ -1,8 +1,10 @@
-import { getCompiler, compile, normalizeErrors, readAsset } from './helpers';
+import { compile, getCompiler, normalizeErrors, readAsset } from './helpers';
 
-describe('loader', () => {
-  it('should works', async () => {
-    const compiler = getCompiler('simple.js');
+describe('name option', () => {
+  it('value', async () => {
+    const compiler = getCompiler('simple.js', {
+      name: true,
+    });
     const stats = await compile(compiler);
 
     expect(readAsset('main.bundle.js', compiler, stats)).toMatchSnapshot(
