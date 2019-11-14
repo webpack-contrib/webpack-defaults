@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.1](https://github.com/webpack-contrib/webpack-defaults/compare/v6.0.0...v6.0.1) (2019-11-14)
+
+
+### Bug Fixes
+
+* azure pipelines cache for lint ([54a0b15](https://github.com/webpack-contrib/webpack-defaults/commit/54a0b15))
+* lint all js files except ignored ([9242c3d](https://github.com/webpack-contrib/webpack-defaults/commit/9242c3d))
+
+
+
 ### [6.0.0](https://github.com/webpack-contrib/webpack-defaults/compare/v5.1.1...v6.0.0) (2019-11-14)
 
 
