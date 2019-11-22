@@ -1,7 +1,7 @@
 import { compile, getCompiler, normalizeErrors, readAsset } from './helpers';
 
-describe('name option', () => {
-  it('value', async () => {
+describe('"name" option', () => {
+  it('should work with "Boolean" value equal "true"', async () => {
     const compiler = getCompiler('simple.js', {
       name: true,
     });

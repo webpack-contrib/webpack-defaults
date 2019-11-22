@@ -1,7 +1,7 @@
 import { getCompiler, compile, normalizeErrors, readAsset } from './helpers';
 
 describe('loader', () => {
-  it('should works', async () => {
+  it('should work', async () => {
     const compiler = getCompiler('simple.js');
     const stats = await compile(compiler);
 
