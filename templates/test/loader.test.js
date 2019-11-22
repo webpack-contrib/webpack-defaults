@@ -1,13 +1,19 @@
-import { getCompiler, compile, normalizeErrors, readAsset } from './helpers';
+import {
+  compile,
+  execute,
+  getCompiler,
+  normalizeErrors,
+  readAsset,
+} from './helpers';
 
 describe('loader', () => {
   it('should work', async () => {
     const compiler = getCompiler('simple.js');
     const stats = await compile(compiler);
 
-    expect(readAsset('main.bundle.js', compiler, stats)).toMatchSnapshot(
-      'result'
-    );
+    expect(
+      execute(readAsset('main.bundle.js', compiler, stats))
+    ).toMatchSnapshot('result');
     expect(normalizeErrors(stats.compilation.warnings)).toMatchSnapshot(
       'warnings'
     );
