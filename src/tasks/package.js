@@ -64,6 +64,10 @@ module.exports = () => {
       author: existing.author || `${name}`,
       homepage: `https://github.com/${repository}`,
       bugs: `https://github.com/${repository}/issues`,
+      funding: {
+        type: 'opencollective',
+        url: 'https://opencollective.com/webpack',
+      },
       main: existing.main || 'dist/cjs.js',
       engines: {
         node: `>= 10.13.0`,
