@@ -23,26 +23,48 @@ describe('validate options', () => {
     it(`should ${
       type === 'success' ? 'successfully validate' : 'throw an error on'
     } the "${key}" option with "${stringifyValue(value)}" value`, async () => {
-      const compiler = getCompiler('simple.js', { [key]: value });
-
-      let stats;
-
-      try {
-        stats = await compile(compiler);
-      } finally {
-        if (type === 'success') {
-          expect(stats.hasErrors()).toBe(false);
-        } else if (type === 'failure') {
-          const {
-            compilation: { errors },
-          } = stats;
-
-          expect(errors).toHaveLength(1);
-          expect(() => {
-            throw new Error(errors[0].error.message);
-          }).toThrowErrorMatchingSnapshot();
-        }
-      }
+      // For loaders
+      // const compiler = getCompiler('simple.js', { [key]: value });
+      //
+      // let stats;
+      //
+      // try {
+      //   stats = await compile(compiler);
+      // } finally {
+      //   if (type === 'success') {
+      //     expect(stats.hasErrors()).toBe(false);
+      //   } else if (type === 'failure') {
+      //     const {
+      //       compilation: { errors },
+      //     } = stats;
+      //
+      //     expect(errors).toHaveLength(1);
+      //     expect(() => {
+      //       throw new Error(errors[0].error.message);
+      //     }).toThrowErrorMatchingSnapshot();
+      //   }
+      // }
+      // For plugins
+      // let error;
+      //
+      // try {
+      //   // eslint-disable-next-line no-new
+      //   new Plugin({ [key]: value });
+      // } catch (errorFromPlugin) {
+      //   if (errorFromPlugin.name !== 'ValidationError') {
+      //     throw errorFromPlugin;
+      //   }
+      //
+      //   error = errorFromPlugin;
+      // } finally {
+      //   if (type === 'success') {
+      //     expect(error).toBeUndefined();
+      //   } else if (type === 'failure') {
+      //     expect(() => {
+      //       throw error;
+      //     }).toThrowErrorMatchingSnapshot();
+      //   }
+      // }
     });
   }
 

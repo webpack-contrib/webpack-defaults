@@ -1,4 +1,11 @@
-import { compile, getCompiler, normalizeErrors, readAsset } from './helpers';
+import {
+  compile,
+  execute,
+  getCompiler,
+  getErrors,
+  getWarnings,
+  readAsset,
+} from './helpers';
 
 describe('"name" option', () => {
   it('should work with "Boolean" value equal "true"', async () => {
@@ -7,12 +14,10 @@ describe('"name" option', () => {
     });
     const stats = await compile(compiler);
 
-    expect(readAsset('main.bundle.js', compiler, stats)).toMatchSnapshot(
-      'result'
-    );
-    expect(normalizeErrors(stats.compilation.warnings)).toMatchSnapshot(
-      'warnings'
-    );
-    expect(normalizeErrors(stats.compilation.errors)).toMatchSnapshot('errors');
+    expect(
+      execute(readAsset('main.bundle.js', compiler, stats))
+    ).toMatchSnapshot('result');
+    expect(getErrors(stats)).toMatchSnapshot('errors');
+    expect(getWarnings(stats)).toMatchSnapshot('warnings');
   });
 });
