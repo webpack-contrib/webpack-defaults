@@ -35,7 +35,7 @@
     "pretest": "npm run lint",
     "test": "cross-env NODE_ENV=test npm run test:coverage",
     "defaults": "npm run build && node bin/index.js",
-    "postinstall": "node lib/postinstall-win32.js"
+    "postinstall": "node lib/post_install.js"
   },
   "files": [
     "bin",
