@@ -91,7 +91,8 @@ module.exports = () => {
         test: 'npm run test:coverage',
         prepare: 'npm run build',
         release: 'standard-version',
-        defaults: existing.scripts.defaults || 'webpack-defaults',
+        defaults:
+          (existing.scripts && existing.scripts.defaults) || 'webpack-defaults',
       },
       files: existing.files || ['dist/', 'lib/', 'index.js'],
       peerDependencies: existing.peerDependencies || {

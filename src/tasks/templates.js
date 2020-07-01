@@ -26,10 +26,20 @@ const files = [
 
 const testFiles = [
   'test/loader.test.js',
-  'test/options.test.js',
-  'test/fixtures/fixture.js',
+  'test/cjs.test.js',
+  'test/name-option.test.js',
+  'test/validate-options.test.js',
+  'test/fixtures/simple.js',
   'test/fixtures/foo.js',
-  'test/helpers/compiler.js',
+  'test/helpers/compile.js',
+  'test/helpers/execute.js',
+  'test/helpers/getCompiler.js',
+  'test/helpers/getErrors.js',
+  'test/helpers/getWarnings.js',
+  'test/helpers/index.js',
+  'test/helpers/normalizeErrors.js',
+  'test/helpers/readAsset.js',
+  'test/helpers/readAssets.js',
 ];
 
 // These files will be created only once
