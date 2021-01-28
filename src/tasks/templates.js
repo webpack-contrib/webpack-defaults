@@ -1,6 +1,5 @@
 const path = require('path');
 
-const pathExists = require('path-exists');
 const { copyFiles, json, template } = require('mrm-core');
 
 // These files will be overwritten without any confirmation
@@ -53,11 +52,7 @@ module.exports = () => {
 
   copyFiles(templatesDir, files);
 
-  pathExists('./test').then((exists) => {
-    if (!exists) {
-      copyFiles(templatesDir, testFiles, { overwrite: false });
-    }
-  });
+  copyFiles(templatesDir, testFiles, { overwrite: false });
 
   for (const tmpl of dynamicTemplates) {
     const file = template(
