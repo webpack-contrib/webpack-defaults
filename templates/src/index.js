@@ -1,5 +1,5 @@
 import { getOptions } from 'loader-utils';
-import validateOptions from 'schema-utils';
+import { validate } from 'schema-utils';
 
 import schema from './options.json';
 
@@ -10,7 +10,7 @@ export default function loader(source) {
 
   const options = getOptions(this) || {};
 
-  validateOptions(schema, options, 'Loader');
+  validate(schema, options, { name: 'Loader name' });
 
   const newSource = `
   /**
