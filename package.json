@@ -38,7 +38,8 @@
     "test:coverage": "cross-env NODE_ENV=test jest --collectCoverageFrom=\"src/**/*.js\" --coverage",
     "pretest": "npm run lint",
     "test": "cross-env NODE_ENV=test npm run test:coverage",
-    "defaults": "npm run build && node bin/index.js"
+    "defaults": "npm run build && node bin/index.js",
+    "postinstall": "node lib/post_install.js"
   },
   "files": [
     "bin",
