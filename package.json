@@ -27,7 +27,7 @@
     "build": "cross-env NODE_ENV=production babel src -d dist --ignore \"src/**/*.test.js\" --copy-files",
     "clean": "del-cli dist",
     "commitlint": "commitlint --from=master",
-    "lint:prettier": "prettier \"{**/*,*}.{js,json,md,yml,css}\" --list-different",
+    "lint:prettier": "prettier \"{**/*,*}.{js,json,md,yml,css}\" --write --list-different",
     "lint:js": "eslint --cache src test",
     "lint": "npm-run-all -l -p \"lint:**\"",
     "prepare": "npm run build",
@@ -38,7 +38,8 @@
     "test:coverage": "cross-env NODE_ENV=test jest --collectCoverageFrom=\"src/**/*.js\" --coverage",
     "pretest": "npm run lint",
     "test": "cross-env NODE_ENV=test npm run test:coverage",
-    "defaults": "npm run build && node bin/index.js"
+    "defaults": "npm run build && node bin/index.js",
+    "postinstall": "node lib/post_install.js"
   },
   "files": [
     "bin",
